@@ -10,8 +10,8 @@ D- Dependency Inversion Principle--------> High-level modules should not depend 
 """
 #imports
 
-from single_responsibility import single_responsibility_fun as run_single_responsibilty
-from open_closed import run_open_closed_
+from single_responsibility.single_responsibility import single_responsibility_fun as run_single_responsibilty
+from open_closed_principles.open_closed import run_open_closed_
 #code practice
 
 if __name__ == "__main__":
