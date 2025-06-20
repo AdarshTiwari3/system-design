@@ -32,6 +32,22 @@ class Rectangle(Shape):
     def calculate_area(self):
         return self.length*self.width
         
+#example-2
+
+class Discount(ABC):
+    @abstractmethod
+    def apply(self, price):
+        pass
+
+class StudentDiscount(Discount):
+    def apply(self, price):
+        return price * 0.9
+
+class SeniorDiscount(Discount):
+    def apply(self, price):
+        return price * 0.85
+
+
 #use any
 def open_closed_func():
     circle = Circle(5)
@@ -48,3 +64,12 @@ def run_open_closed_():
 
     for shape in shapes:
         print(f"Area of {type(shape).__name__}: {shape.calculate_area():.2f}")
+    
+
+    #this is for example two
+    print("\n🔹 Discount Price Calculation")
+    student = StudentDiscount()
+    senior_member = SeniorDiscount()
+
+    print(f"Student Price (on $100): INR {student.apply(100):.2f}")
+    print(f"Senior Price (on $100): INR {senior_member.apply(100):.2f}")
