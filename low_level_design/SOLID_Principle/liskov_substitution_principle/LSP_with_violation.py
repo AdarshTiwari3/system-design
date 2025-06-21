@@ -13,7 +13,7 @@ class Eagle(Bird):
     def fly(self) -> str:
         return "Eagle can fly"
 
-class Lion(Bird):
+class Ostrich(Bird):
     def fly(self) -> str:
         #this violates the property of LSP , bacause this will violate the property of BIRD class
         raise NotImplementedError("This voilates the property of LSP")
@@ -27,4 +27,4 @@ def can_fly(bird:Bird):
 
 can_fly(Sparrow()) 
 can_fly(Eagle()) 
-can_fly(Lion())
+can_fly(Ostrich())
