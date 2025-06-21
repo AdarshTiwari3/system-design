@@ -25,6 +25,7 @@ def can_fly(bird:Bird):
     print(bird.fly())  # This will crash for Lion
 
 
+#test function
 can_fly(Sparrow()) 
 can_fly(Eagle()) 
 can_fly(Ostrich())
