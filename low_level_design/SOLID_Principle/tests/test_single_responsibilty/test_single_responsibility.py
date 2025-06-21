@@ -15,19 +15,19 @@ OR
     pythonpath = .
 """
 
-def test_authenticate_user(capfd) -> None:
+def test_authenticate_user(capsys) -> None:
     """Test that the user authentication prints correct output"""
     auth = UserAuthentication()
     username: str = "Rhon"
     password: str = "RohnPassword"
     auth.authenticate_user(username, password)
 
-    output, _ = capfd.readouterr()
+    output, _ = capsys.readouterr() #capsys is used to test print(), parallel is capfd
     expected_output = "Authenticating user 'Rhon' with provided password..."
 
     assert expected_output in output, f"\nExpected output: '{expected_output}\n', but got: '{output}'"
 
-def test_email_notifier(capfd) -> None:
+def test_email_notifier(capsys) -> None:
     """Test that the email notifier prints the correct output"""
     notifier = EmailNotifier()
     user_name: str = "Andy"
@@ -36,12 +36,12 @@ def test_email_notifier(capfd) -> None:
 
     notifier.send_email_notification(user_name, user_email , msg )
 
-    output, _ = capfd.readouterr()
+    output, _ = capsys.readouterr()
     expected_output = "Sending email to andy@mail.com (User: Andy) with message: 'your address changed successfully'"
 
     assert expected_output in output, f"\nExpected output: '{expected_output}\n', but got: '{output}'"
 
-def test_user_profile_manager(capfd) -> None:
+def test_user_profile_manager(capsys) -> None:
     """Test that the user profile manager prints the correct output"""
     manager = UserProfileManager()
     
@@ -51,7 +51,7 @@ def test_user_profile_manager(capfd) -> None:
 
     manager.update_user_profile(user_id, data)
 
-    output, _ = capfd.readouterr()
+    output, _ = capsys.readouterr()
     expected_output = f"Updating profile for user ID {user_id} with data: {data}"
 
     assert expected_output in output, f"\nExpected output: '{expected_output}\n', but got: '{output}'"
