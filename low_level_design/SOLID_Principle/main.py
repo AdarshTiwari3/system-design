@@ -12,6 +12,8 @@ D- Dependency Inversion Principle--------> High-level modules should not depend 
 
 from single_responsibility.single_responsibility import single_responsibility_fun as run_single_responsibilty
 from open_closed_principles.open_closed import run_open_closed_
+from liskov_substitution_principle.liskov_substitution import run_liskov_substitution_func
+
 #code practice
 
 if __name__ == "__main__":
@@ -21,4 +23,8 @@ if __name__ == "__main__":
 
     print("\n🔹 Open-Closed PRINCIPLE\n")
     run_open_closed_()
+    print()
+
+    print("\nLiskov Substitution Principle\n")
+    run_liskov_substitution_func()
     print()
