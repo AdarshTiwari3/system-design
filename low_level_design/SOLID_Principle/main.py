@@ -14,6 +14,7 @@ from single_responsibility.single_responsibility import single_responsibility_fu
 from open_closed_principles.open_closed import run_open_closed_
 from liskov_substitution_principle.liskov_substitution import run_liskov_substitution_func
 from interface_segregation_principle.interface_segregation import run_interface_segregation_principles
+from dependency_inversion.dependency_inversion import run_dependency_inversion_principle
 #code practice
 
 if __name__ == "__main__":
@@ -29,6 +30,10 @@ if __name__ == "__main__":
     run_liskov_substitution_func()
     print()
 
-    print("\n Interface Segregation Principle\n")
+    print("\nInterface Segregation Principle\n")
     run_interface_segregation_principles()
+    print()
+
+    print("\nDependency Inversion Principle\n")
+    run_dependency_inversion_principle()
     print()
