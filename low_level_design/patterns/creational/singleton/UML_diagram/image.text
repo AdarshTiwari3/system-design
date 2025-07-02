@@ -1,0 +1,11 @@
++--------------------+
+|     Singleton      |
++--------------------+
+| - _instance: Singleton |
+| - _initialized: bool   |
+| + value: Any (optional)|
++--------------------+
+| + __new__(cls, *args) : Singleton |
+| + __init__(self, value=None)     |
+| + get_instance() : Singleton     |
++--------------------+
