@@ -21,9 +21,14 @@ Steps in implementing Singleton:
 
 
 from singleton_lazy_loading import run_lazy_initialization_singleton
+from singleton_eager_loading import run_eager_singleton
 
 if __name__=="__main__":
 
     print("\nLazy Initialization Singleton\n")
     run_lazy_initialization_singleton()
+    print("\n")
+
+    print("\nEager Initialization Singleton\n")
+    run_eager_singleton()
     print("\n")

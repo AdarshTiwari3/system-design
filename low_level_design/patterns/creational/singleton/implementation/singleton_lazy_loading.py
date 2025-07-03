@@ -10,12 +10,17 @@ class LazySingleton:
     _instance=None   #using class variable and keeping private although not using double underscore, it will work with double underscore also , but in python we treat single underscore variable is used for internal purpose only like private
 
     def __new__(cls) -> Self: #Singleton
-        if cls._instance==None:
+        if cls._instance is None:
             # if instance is none means no object has been created then only it will create object otherwise not
             cls._instance=super().__new__(cls)
-
+            cls._instance._initialized = False  # Ensure __init__ only runs once, this means instance attribute  or it becomes instance variable but in it would be required
         return cls._instance
     
+    def __init__(self):
+        if not self._initialized:
+            print("Initializing LazySingleton")
+            # Put actual initialization logic here
+            self._initialized = True
 
     @classmethod
     def get_instance(cls):
