@@ -20,8 +20,9 @@ Steps in implementing Singleton:
 #this is a demo file of all type of singleton design pattern
 
 
-from singleton_lazy_loading import run_lazy_initialization_singleton
-from singleton_eager_loading import run_eager_singleton
+from singleton_lazy_initialization import run_lazy_initialization_singleton
+from singleton_eager_initialization import run_eager_singleton
+from thread_safe_singleton import run_thread_safe_singleton as run_thread_safe_and_double_checked_lock
 
 if __name__=="__main__":
 
@@ -31,4 +32,8 @@ if __name__=="__main__":
 
     print("\nEager Initialization Singleton\n")
     run_eager_singleton()
+    print("\n")
+
+    print("\nThread Safe and Double checked lock pattern Singleton\n")
+    run_thread_safe_and_double_checked_lock()
     print("\n")
