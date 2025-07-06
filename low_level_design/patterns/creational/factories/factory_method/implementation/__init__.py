@@ -19,10 +19,3 @@ Here’s the idea:
 Instead of putting the burden of decision-making in a single place, we distribute object creation responsibilities across the system in a clean, organized way.
 
 '''
-
-def run_factory_design_pattern():
-    print("\nFactory Design pattern")
-
-
-if __name__=="__main__":
-    run_factory_design_pattern()

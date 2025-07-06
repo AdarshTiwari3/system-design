@@ -1,5 +1,8 @@
-from simple_pizza_factory import SimpleFactoryPizza
-from pizza_store import PizzaStore
+#Entry point of the design
+#client code
+
+from factories.simple_pizza_factory import SimpleFactoryPizza
+from stores.pizza_store import PizzaStore
 
 
 #pizza menu 

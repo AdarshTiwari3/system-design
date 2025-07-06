@@ -1,6 +1,6 @@
 #import the base class of pizza and use here in subclass
 
-from pizza import Pizza
+from models.pizza import Pizza
 
 class CornPizza(Pizza):
     def prepare(self):

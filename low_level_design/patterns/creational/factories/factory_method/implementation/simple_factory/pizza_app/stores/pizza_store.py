@@ -1,6 +1,5 @@
-#this is client for simple factory method
-from simple_pizza_factory import SimpleFactoryPizza
-from pizza import Pizza
+from factories.simple_pizza_factory import SimpleFactoryPizza
+from models.pizza import Pizza
 class PizzaStore:
     def __init__(self, factory: SimpleFactoryPizza):
         self.factory=factory # has a relationship with SimpleFactoryPizza as it is creating object of that class
