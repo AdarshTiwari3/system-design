@@ -19,4 +19,5 @@ class PizzaStore(ABC):
         
     @abstractmethod
     def create_pizza(self) -> Pizza:
+        #this is actual factory method which passes its child or subclass to handle object creation
         pass
