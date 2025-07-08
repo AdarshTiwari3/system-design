@@ -1,0 +1,1 @@
+# checkbox abstract class - Product B
