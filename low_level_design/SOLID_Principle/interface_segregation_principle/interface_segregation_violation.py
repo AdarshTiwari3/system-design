@@ -20,7 +20,7 @@ from abc import ABC, abstractmethod
 
 class Machine(ABC):
     @abstractmethod
-    def print(self):
+    def print(self)-> str:
         pass
 
     @abstractmethod
