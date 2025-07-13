@@ -10,7 +10,7 @@ It’s particularly useful in situations where:
 
 * Instead of having external code copy or recreate the object, the object itself knows how to create its clone. It exposes a clone() or copy() method that returns a new instance with the same data.
 You want to create a new object by copying an existing object (a prototype), instead of building it from scratch
-
+- An object that supports cloning is called a prototype. 
 In short- 
     - When we want to reuse an existing object’s structure and behavior by making a copy of it, and then tweak the copy as needed, we use the Prototype Design Pattern.
 
@@ -32,4 +32,6 @@ One says "Cancel"
 Another is red
 
 Another has different size
+
+The best example of Prototype Design Pattern would be differenent Template of Documents
 """
