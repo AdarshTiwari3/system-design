@@ -1,0 +1,1 @@
+"""Adaptee Implementation"""
