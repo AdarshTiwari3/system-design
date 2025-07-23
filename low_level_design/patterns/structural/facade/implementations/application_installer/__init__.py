@@ -1,0 +1,3 @@
+"""
+A great real-world example of the Facade pattern is a software installer. When you install an application like VSCode, you just click 'Install'. Behind the scenes, the installer sets environment variables, copies files, installs dependencies, and creates shortcuts. Each of those is a subsystem, but the user doesn't deal with them individually. The installer class acts as a Facade — providing a simplified interface over complex internals.
+"""
