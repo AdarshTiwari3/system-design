@@ -1,0 +1,1 @@
+"""Client Method to simulate the game"""
