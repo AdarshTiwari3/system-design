@@ -7,9 +7,9 @@ class SmallRobot(RobotInterface):
         self.__type=_type
         self.__model=model
         self.__color=color
-        
+
     @property
-    def type(self): return self.__type
+    def robot_type(self): return self.__type
 
     def display(self, context: dict)-> None:
         """Displays the robot with extrinsic context"""
