@@ -1,0 +1,1 @@
+"""client for proxy design pattern of api gateway example"""
