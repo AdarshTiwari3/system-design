@@ -1,0 +1,1 @@
+"""the concrete class of service interface, these classes will be actual service which will be consumed by proxy"""
