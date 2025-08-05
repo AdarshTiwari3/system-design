@@ -1,0 +1,1 @@
+"""Implementation of Iterator Design Pattern of music playlist iterator"""
