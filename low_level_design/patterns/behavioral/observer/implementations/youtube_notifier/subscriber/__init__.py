@@ -1,0 +1,1 @@
+"""Implementation of Subscriber or Observer"""

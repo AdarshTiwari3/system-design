@@ -1,0 +1,28 @@
+
+Observer Design Pattern Implementation
+
+Running youtube notifier for Observer Design Pattern
+[INFO]- 🙍 John subscribed to the channel: system-design-youtube-channel 
+[INFO]- 🙍 Smith subscribed to the channel: system-design-youtube-channel 
+[INFO]- 🙍 Ady subscribed to the channel: system-design-youtube-channel 
+[INFO]- 🙍 Trump subscribed to the channel: system-design-youtube-channel 
+[INFO] Video stored and fetched from DB successfully.
+[PUBLISHER]🖥️ - system-design-youtube-channel: 🎬 New video 'Observer Design Pattern- explanation/implementation' uploaded on channel: system-design-youtube-channel
+
+[Notification]-📧 John got notification message- 🎬 New video 'Observer Design Pattern- explanation/implementation' uploaded on channel: system-design-youtube-channel
+
+[Notification]-📧 Smith got notification message- 🎬 New video 'Observer Design Pattern- explanation/implementation' uploaded on channel: system-design-youtube-channel
+
+[Notification]-📧 Ady got notification message- 🎬 New video 'Observer Design Pattern- explanation/implementation' uploaded on channel: system-design-youtube-channel
+
+[Notification]-📧 Trump got notification message- 🎬 New video 'Observer Design Pattern- explanation/implementation' uploaded on channel: system-design-youtube-channel
+[PUBLISHER]🖥️ - system-design-youtube-channel: Will be live in 10 minutes
+
+[Notification]-📧 John got notification message- Will be live in 10 minutes
+
+[Notification]-📧 Smith got notification message- Will be live in 10 minutes
+
+[Notification]-📧 Ady got notification message- Will be live in 10 minutes
+
+[Notification]-📧 Trump got notification message- Will be live in 10 minutes
+[INFO]- 🙍 Trump unsubscribed the channel: system-design-youtube-channel 
