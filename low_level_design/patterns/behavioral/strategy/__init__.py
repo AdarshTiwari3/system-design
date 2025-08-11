@@ -14,9 +14,5 @@ The Strategy Pattern solves by encapsulating each behavior in its own class and 
 In short-
     👉  When multiple subclasses share the same behavior or method, avoid duplicating it — instead, extract it into a separate class using the Strategy Pattern, making the behavior reusable, interchangeable, and compliant with LSP.
 
-    
-The Strategy pattern suggests that you take a class that does something specific in a lot of different ways and extract all of these algorithms into separate classes called strategies.
-
-The original class, called context, must have a field for storing a reference to one of the strategies. The context delegates the work to a linked strategy object instead of executing it on its own.
-
+ 
 """
