@@ -1,0 +1,23 @@
+
+Strategy Design Pattern
+
+Running Authentication Strategies based on Strategy Design Pattern
+
+Please wait... verifying user details via password authentication strategy
+❌ Forbidden, 403 - Not authorized user
+
+Please wait... verifying user details via password authentication strategy
+
+✅ Verified user successfully
+
+Please wait... verifying the OAuth details via OAuth Strategy
+❌ Forbidden, 403 - Not authorized user
+
+Please wait... verifying the OAuth details via OAuth Strategy
+✅ Verified user successfully
+
+Please wait... verifying the OTP via OTP Authentication Strategy
+❌ Incorrect OTP, please try again
+
+Please wait... verifying the OTP via OTP Authentication Strategy
+✅ OTP verified successfully
