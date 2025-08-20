@@ -9,6 +9,7 @@ Command Interface Implementation
 from abc import ABC, abstractmethod
 
 class Command(ABC):
+    undoable: bool = True
     @abstractmethod
     def execute(self):
         """Execute the command on the receiver."""
