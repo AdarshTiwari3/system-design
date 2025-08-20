@@ -18,13 +18,5 @@ Which device it affects
 How to execute it
 (Optionally) How to undo it
 
-or 
-
-The Command Design Pattern is a behavioral pattern that turns a request into a standalone object, allowing you to:
-
-Parameterize actions
-Queue or log operations
-Support undo/redo
-Decouple the invoker of an operation from the receiver that performs it
 
 """
