@@ -1,0 +1,20 @@
+State Design Pattern Implementation
+
+Running Vending Machine
+Item item-0126 selected from the Machine
+[Machine] Payment of 56.0 accepted.
+
+Dispensing the item- item-0126...
+[Machine] Dispensed Milk.
+
+✅Item- item-0126 dispensed successfully
+[Machine] Returning to initial state.
+
+Item item-0123 selected from the Machine
+[Machine] Payment of 20 accepted.
+
+Dispensing the item- item-0123...
+[Machine] Dispensed Coke.
+
+✅Item- item-0123 dispensed successfully
+[Machine] Returning to initial state.
