@@ -6,7 +6,7 @@ if TYPE_CHECKING:
     from context.vending_machine import VendingMachine
 from states.state import State
 
-import time 
+
 
 class DispenseState(State):
     """State responsible for dispensing the item after payment is complete."""
@@ -18,12 +18,12 @@ class DispenseState(State):
         print(f"\nPayment already done")
 
     def dispense_item(self, context: VendingMachine) -> None:
-        item_code = context._selected_item
+        item_code = context.get_selected_item()
         context.reduce_stock(item_code)
 
         print(f"[Machine] Dispensed {context._inventory[item_code]['name']}.")
         print(f"\n✅Item- {context.get_selected_item()} dispensed successfully")
         print("[Machine] Returning to initial state.")
 
-
         context.reset_state()
+        

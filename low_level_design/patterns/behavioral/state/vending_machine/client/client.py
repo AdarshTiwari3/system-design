@@ -16,20 +16,24 @@ def run_vending_machine():
     price=machine.get_item_price(item_code)
     machine.pay_the_amount(price)
     machine.dispense_item()
+    #Clearing the state explicitly to aviod any state overlapping if process does not get completed
+    machine.reset_state()
 
-    print()
+    print("2nd item")
     item_code="item-0123"
     machine.select_item(item_code)
     price=machine.get_item_price(item_code)
     machine.pay_the_amount(1)
     machine.dispense_item()
+    machine.reset_state()
 
-    print()
+    print("3rd Item")
     item_code="item-0126"
     machine.select_item(item_code)
     price=machine.get_item_price(item_code)
     machine.pay_the_amount(price)
     machine.dispense_item()
+    machine.reset_state()
 
     print("\nupdated inventory=",inventory)
     

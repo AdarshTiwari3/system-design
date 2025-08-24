@@ -24,6 +24,8 @@ class PaymentState(State):
         "change the state to dispense state"
         time.sleep(2)
         context.set_state(DispenseState())
+        context.dispense_item() #this is required because once payment state is called from the client as machine.dispense_item(), it calls the paymentState.dispense_item() not Dispense state's method
+        
         
        
 

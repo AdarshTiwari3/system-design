@@ -15,19 +15,19 @@ class ItemSelectedState(State):
         print("\nItem is already selected, please proceed to payment")
 
     def pay_the_amount(self, context: VendingMachine, amount: float) -> None:
-        item_code = context._selected_item
-        item_price = context._inventory[item_code]["price"]
+        item_code = context.get_selected_item()
+        item_price = context.get_item_price(item_code)
 
-        if amount < item_price:
-            print(f"\nInsufficient amount, please enter {item_price} or more")
-            return
-        
-        # Insert the amount
+        # add inserted money
         context.add_amount(amount)
-        print(f"[Machine] Payment of {amount} accepted.")
+        print(f"[Machine] Payment of {amount} accepted. Total inserted: {context.get_inserted_amount()}")
 
-        # Move to payment state
+        if context.get_inserted_amount() < item_price:
+            print(f"[Payment] Still need {item_price - context.get_inserted_amount()} more.")
+            return
+
+        # Move to payment state once enough funds are inserted
         context.set_state(PaymentState())
-
+        
     def dispense_item(self, context: VendingMachine) -> None:
         print("\nPlease pay the amount, Item can't be dispensed without payment")
