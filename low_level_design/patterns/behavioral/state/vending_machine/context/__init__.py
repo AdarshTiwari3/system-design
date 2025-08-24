@@ -1,0 +1,1 @@
+"""Context of the state design pattern- here vending machine is context which has some states and its behaviour changes accordingly"""

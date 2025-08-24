@@ -1,0 +1,26 @@
+State Design Pattern Implementation
+
+Running Vending Machine
+Item item-0126 selected from the Machine
+[Machine] Payment of 56.0 accepted. Total inserted: 56.0
+
+Dispensing the item- item-0126...
+[Machine] Dispensed Milk.
+
+✅Item- item-0126 dispensed successfully
+[Machine] Returning to initial state.
+2nd item
+Item item-0123 selected from the Machine
+[Machine] Payment of 1 accepted. Total inserted: 1.0
+[Payment] Still need 19.0 more.
+
+Please pay the amount, Item can't be dispensed without payment
+3rd Item
+
+Item out of stock
+
+Please select an item first before payment
+
+No item selected to dispense
+
+updated inventory= {'item-0123': {'name': 'Coke', 'price': 20, 'stock': 2}, 'item-0124': {'name': 'Chips', 'price': 10, 'stock': 1}, 'item-0125': {'name': 'Pop-corn', 'price': 39.0, 'stock': 2}, 'item-0126': {'name': 'Milk', 'price': 56.0, 'stock': 0}}
