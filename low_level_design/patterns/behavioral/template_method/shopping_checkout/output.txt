@@ -1,0 +1,34 @@
+
+Template Design Pattern
+
+Shopping Cart Implementation using Template Design Pattern
+
+Checkout With Credit Card
+
+✔️ Checkout Item Selected=['Laptop', 'Mouse']
+
+✔️ Item-['Laptop', 'Mouse'] added to cart 🛒, total=120000
+
+[Credit Card] Processing payment. Amount: 120000 INR + Fee: 25.0,Total = 120025.0 INR
+
+✅ Receipt send to customer@example.com with order details
+
+Checkout With UPI
+
+✔️ Checkout Item Selected=['Shoes']
+
+✔️ Item-['Shoes'] added to cart 🛒, total=800
+
+[UPI] Processing payment. Amount: 800 INR + Fee: 0,Total = 800 INR
+
+✅ Receipt send to user@paypal.com with order details
+
+Checkout with PayPal
+
+✔️ Checkout Item Selected=['Book']
+
+✔️ Item-['Book'] added to cart 🛒, total=150
+
+[PayPal] Processing payment. Amount: 150 INR + Fee: 5.0,Total = 155.0 INR
+
+✅ Receipt send to reader@example.com with order details
