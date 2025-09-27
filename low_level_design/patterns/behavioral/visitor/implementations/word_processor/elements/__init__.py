@@ -1,0 +1,1 @@
+"""Elements implementation in visitor design pattern"""
