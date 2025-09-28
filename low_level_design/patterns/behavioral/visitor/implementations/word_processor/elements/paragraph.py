@@ -8,7 +8,11 @@ if TYPE_CHECKING:
 class Paragraph(Element):
 
     def __init__(self, text: str) -> None:
-        self.text=text
+        self._text = text 
+
+    @property
+    def text(self) -> str:
+        return self._text
 
     def accept(self, visitor: "Visitor"):
         print(f"\nParagraph Element")

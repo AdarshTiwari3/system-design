@@ -8,8 +8,12 @@ if TYPE_CHECKING:
 
 class TableElement(Element):
     def __init__(self, data: list[list[str]]) -> None:
-        self.data=data
+        self._data=data
 
+    @property
+    def data(self):
+        return self._data
+    
     def accept(self, visitor: "Visitor"):
         print(f"\nTable Element")
         return visitor.visit_table(self)
