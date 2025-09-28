@@ -1,0 +1,42 @@
+
+Visitor Design Pattern
+
+-------- Render Documnent -------
+
+Paragraph Element
+
+[Render] paragraph - This is a visitor design pattern implementation
+
+Image Element
+
+[Render] image - visitor.png
+
+Table Element
+
+[Render] table - [['Name', 'Age'], ['Ram', '20'], ['Shyam', '18'], ['John', '33']]
+Name | Age
+Ram | 20
+Shyam | 18
+John | 33
+
+******** Check Spellings *******
+
+Paragraph Element
+
+[SpellCheck] checking spellings in Paragraph - This is a visitor design pattern implementation
+
+Image Element
+
+[SpellCheck] skipping spell checks in Image- visitor.png
+
+Table Element
+
+[SpellCheck] checking table cells- [['Name', 'Age'], ['Ram', '20'], ['Shyam', '18'], ['John', '33']]
+ - Checking: Name
+ - Checking: Age
+ - Checking: Ram
+ - Checking: 20
+ - Checking: Shyam
+ - Checking: 18
+ - Checking: John
+ - Checking: 33
