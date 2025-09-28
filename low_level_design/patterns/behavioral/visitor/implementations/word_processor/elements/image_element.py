@@ -8,7 +8,11 @@ if TYPE_CHECKING:
 
 class ImageElement(Element):
     def __init__(self, image) -> None:
-        self.image=image
+        self._image = image
+
+    @property
+    def image(self) -> str:
+        return self._image
 
     def accept(self, visitor: "Visitor"):
         print(f"\nImage Element")
