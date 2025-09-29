@@ -1,0 +1,1 @@
+"""components in mediator design pattern"""
