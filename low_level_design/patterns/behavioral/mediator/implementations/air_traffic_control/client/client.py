@@ -2,7 +2,7 @@
 from mediator.control_tower import ControlTower
 from components.cargo_plane import CargoPlane
 from components.fighter_jet import FighterJet
-from components.passenger_plane import PassengerPlaner
+from components.passenger_plane import PassengerPlane
 
 def run_atc_mediator():
     print(f'\nRunning ATC of mediator design pattern')
@@ -14,7 +14,7 @@ def run_atc_mediator():
         'cargo_plane':'fedex-airbus-990'
     }
 
-    plane1=PassengerPlaner(aircraft_names['passenger_plane'],atc)
+    plane1=PassengerPlane(aircraft_names['passenger_plane'],atc)
     plane2=CargoPlane(aircraft_names['cargo_plane'],atc)
     plane3=FighterJet(aircraft_names['figher_plane'],atc)
 

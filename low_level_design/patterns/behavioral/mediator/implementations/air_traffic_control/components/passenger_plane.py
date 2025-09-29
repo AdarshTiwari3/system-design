@@ -1,7 +1,7 @@
 """Passenger plane concrete class of aircraft, component implementation"""
 from components.aircraft import Aircraft
 
-class PassengerPlaner(Aircraft):
+class PassengerPlane(Aircraft):
     def request_landing(self):
         if self.atc.request_landing(self):
             self.land()
