@@ -1,0 +1,24 @@
+Mediator Design Pattern
+
+Running ATC of mediator design pattern
+[ATC] registered the plane: vistara-boeing-777-max
+[ATC] registered the plane: fedex-airbus-990
+[ATC] registered the plane: Su-30 MKI 7155-IND
+
+[ATC]- runway is clear, vistara-boeing-777-max you may proceed for landing
+
+[Passenger Plane]- attempting landing of Aircraft: vistara-boeing-777-max...
+
+[ATC] vistara-boeing-777-max has landed, now runway is clear
+
+[ATC]- runway is clear, fedex-airbus-990 you may proceed for landing
+
+[Cargo Plane]- attempting landing of Aircraft: fedex-airbus-990...
+
+[ATC] fedex-airbus-990 has landed, now runway is clear
+
+[ATC]- runway is clear, Su-30 MKI 7155-IND you may proceed for landing
+
+[Fighter Jet]- performs high-speed landing. Attempting landing of Aircraft: Su-30 MKI 7155-IND...
+
+[ATC] Su-30 MKI 7155-IND has landed, now runway is clear
