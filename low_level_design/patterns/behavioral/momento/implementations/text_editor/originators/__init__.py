@@ -1,0 +1,1 @@
+"""Originator Implementation of Momento design pattern"""
