@@ -11,7 +11,7 @@ class History:
         self._redo_stack.clear()
 
     def undo(self) -> MomentoBase | None:
-        if not self._history:
+        if len(self._history)==0:
             print(f'\nNothing to undo')
             return None
         popped=self._history.pop()
@@ -19,7 +19,7 @@ class History:
         return self._history[-1] if self._history else None
     
     def redo(self) -> MomentoBase | None:
-        if not self._redo_stack:
+        if len(self._redo_stack)==0:
             print(f"\nNothing to redo")
             return None
         popped=self._redo_stack.pop()
