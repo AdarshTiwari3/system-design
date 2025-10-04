@@ -17,6 +17,10 @@ class TextEditor(OriginatorInterface):
     def save(self) -> MomentoBase:
         return EditorMomento(self._content)
     
-    def restore(self, momento) -> None:
+    def restore(self, momento: MomentoBase) -> None:
+        if momento is None:
+            self._content = ""
+            return
         self._content=momento.get_saved_content()
+            
     
