@@ -2,7 +2,7 @@
 Text Editor with Undo/Redo using the Memento Design Pattern
 ===========================================================
 
-This project demonstrates the **Memento Design Pattern** using a simple
+This implementation demonstrates the **Memento Design Pattern** using a simple
 text editor with undo/redo functionality.
 
 - **Originator**: `TextEditor`
@@ -41,9 +41,8 @@ text_editor/
 ├── memento/
 │   └── editor_memento.py     # Memento (EditorMemento)
 ├── caretaker/
-│   └── history.py            # Caretaker (History)
-└── tests/
-    └── test_text_editor.py   # Unit tests
+    └── history.py            # Caretaker (History)
+
 
 
 """
