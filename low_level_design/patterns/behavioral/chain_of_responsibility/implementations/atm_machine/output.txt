@@ -1,0 +1,20 @@
+Withdraw: 500
+
+[Dispensing]- 1 x 500 notes
+
+Withdraw: 3500
+
+[Dispensing] 1 x 2000 notes
+
+[Dispensing]- 3 x 500 notes
+
+Withdraw: 4600
+
+[Dispensing] 2 x 2000 notes
+
+[Dispensing]- 1 x 500 notes
+
+[Dispensing]- 1 x 100 notes
+
+Withdraw: 3310
+Cannot dispense 3310: ATM only supports multiples of 100

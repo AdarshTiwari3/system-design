@@ -1,0 +1,1 @@
+"""Different type of handlers implementation"""
