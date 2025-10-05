@@ -1,3 +1,5 @@
+Running ATM:
+
 Withdraw: 500
 
 [Dispensing]- 1 x 500 notes
