@@ -1,7 +1,7 @@
 """Editor Momento concrete class implementation"""
-from momento.momento_base import MomentoBase
+from memento.memento_base import MementoBase
 
-class EditorMomento(MomentoBase):
+class EditorMemento(MementoBase):
     def __init__(self, content: str):
         self._content=content #must be private to achieve encapsulation without exposing internal details
 

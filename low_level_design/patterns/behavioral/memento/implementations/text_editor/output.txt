@@ -1,0 +1,22 @@
+
+Memento Design Pattern
+
+Running text editor memento
+
+Current content=Hello Memento I am an Editor Memento Implementation
+
+After Undo 1 , content=Hello Memento
+
+After Undo 2 , content=
+
+Nothing to undo
+
+Redo last operation
+
+After Redo 1, content=Hello Memento
+
+Redo last operation
+
+After Redo 2, content=Hello Memento I am an Editor Memento Implementation
+
+Nothing to redo

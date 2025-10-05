@@ -1,16 +1,16 @@
 """Caretaker: Stores and retrieves Mementos, history and perform undo operation"""
-from momento.momento_base import MomentoBase
+from memento.memento_base import MementoBase
 
 class History:
     def __init__(self):
-        self._history: list[MomentoBase]=[]
-        self._redo_stack: list[MomentoBase]=[]
+        self._history: list[MementoBase]=[]
+        self._redo_stack: list[MementoBase]=[]
 
-    def save(self, momento: MomentoBase) -> None:
-        self._history.append(momento)
+    def save(self, memento: MementoBase) -> None:
+        self._history.append(memento)
         self._redo_stack.clear()
 
-    def undo(self) -> MomentoBase | None:
+    def undo(self) -> MementoBase | None:
         if len(self._history)==0:
             print(f'\nNothing to undo')
             return None
@@ -18,7 +18,7 @@ class History:
         self._redo_stack.append(popped)
         return self._history[-1] if self._history else None
     
-    def redo(self) -> MomentoBase | None:
+    def redo(self) -> MementoBase | None:
         if len(self._redo_stack)==0:
             print(f"\nNothing to redo")
             return None

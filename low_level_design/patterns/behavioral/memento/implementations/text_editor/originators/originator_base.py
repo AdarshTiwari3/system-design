@@ -1,7 +1,7 @@
 """Originator Interface Class"""
 
 from abc import ABC , abstractmethod
-from momento.momento_base import MomentoBase
+from memento.memento_base import MementoBase
 
 class OriginatorInterface(ABC):
 
@@ -11,11 +11,11 @@ class OriginatorInterface(ABC):
         pass
 
     @abstractmethod
-    def save(self) -> MomentoBase:
+    def save(self) -> MementoBase:
         """save current state"""
         pass
 
     @abstractmethod
-    def restore(self, momento : MomentoBase) -> None:
+    def restore(self, memento : MementoBase) -> None:
         """restores the state"""
         pass
