@@ -2,16 +2,16 @@
 from originators.text_editor_originator import TextEditor
 from caretaker.caretaker import History
 
-def run_editor_momento():
-    print(f"\nRunning text editor momento")
+def run_editor_memento():
+    print(f"\nRunning text editor memento")
 
     editor=TextEditor()
     history=History()
 
-    editor.write("Hello Momento")
+    editor.write("Hello Memento")
     history.save(editor.save())
 
-    editor.write(" I am an Editor Momento Implementation")
+    editor.write(" I am an Editor Memento Implementation")
     history.save(editor.save())
 
     print(f"\nCurrent content={editor.get_content()}")

@@ -1,8 +1,8 @@
 """Text Editor Originator implementation"""
 
 from originators.originator_base import OriginatorInterface
-from momento.momento_base import MomentoBase
-from momento.editor_momento import EditorMomento
+from memento.memento_base import MementoBase
+from memento.editor_memento import EditorMemento
 
 class TextEditor(OriginatorInterface):
     def __init__(self):
@@ -14,13 +14,13 @@ class TextEditor(OriginatorInterface):
     def get_content(self) -> str:
         return self._content
     
-    def save(self) -> MomentoBase:
-        return EditorMomento(self._content)
+    def save(self) -> MementoBase:
+        return EditorMemento(self._content)
     
-    def restore(self, momento: MomentoBase) -> None:
-        if momento is None:
+    def restore(self, memento: MementoBase) -> None:
+        if memento is None:
             self._content = ""
             return
-        self._content=momento.get_saved_content()
+        self._content=memento.get_saved_content()
             
     

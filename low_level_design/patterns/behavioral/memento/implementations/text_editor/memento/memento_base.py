@@ -2,7 +2,7 @@
 
 from abc import ABC, abstractmethod
 
-class MomentoBase(ABC):
+class MementoBase(ABC):
     @abstractmethod
     def get_saved_content(self) -> str:
         pass
