@@ -17,4 +17,4 @@
 
 3. **ParkingSpot**: This object models an individual parking spot in the parking lot. It’s the physical space where a Vehicle parks, ensuring only appropriately sized vehicles can park based on its capacity.
 
-4. **VehicleType** enum defines the different types of vehicles supported by the parking lot.
+4. **VehicleSize** enum defines the different types of vehicles supported by the parking lot.
