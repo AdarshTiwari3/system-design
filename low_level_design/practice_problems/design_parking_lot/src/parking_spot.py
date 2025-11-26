@@ -2,6 +2,12 @@
 import threading
 from vehicle_size import VehicleSize
 from vehicle import Vehicle
+
+SIZE_RANK = {
+    VehicleSize.SMALL: 0,
+    VehicleSize.MEDIUM: 1,
+    VehicleSize.LARGE: 2,
+}
 class ParkingSpot:
     def __init__(self,parking_spot_id:str, parking_spot_size):
         self.parking_spot_id=parking_spot_id
@@ -41,5 +47,6 @@ class ParkingSpot:
             return vehicle
 
     def can_fit_the_vehicle(self,vehicle: Vehicle) -> bool:
-        return vehicle.get_vehicle_size()==self.parking_spot_size
-            
+        vehicle_size = vehicle.get_vehicle_size()
+        parking_spot_size = self.parking_spot_size
+        return SIZE_RANK[vehicle_size] <= SIZE_RANK[parking_spot_size]
