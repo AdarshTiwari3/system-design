@@ -29,7 +29,7 @@ class ParkingFloor:
 
             return available_parking_spots
         
-    def get_available_parking_spots(self) -> Dict[VehicleSize, int]:
+    def get_total_available_parking_spots(self) -> Dict[VehicleSize, int]:
         """
         Print counts of available spots by size. Snapshot taken under lock.
         """

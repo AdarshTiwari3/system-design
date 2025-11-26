@@ -20,3 +20,5 @@
 4. **VehicleSize** enum defines the different types of vehicles supported by the parking lot.
 
 5. **FeeStrategy**: defines the parking fee calculation including **HourlyFeeStrategy** and **VehicleBasedFeeStrategy**
+
+6. **ParkingStrategy**: defines the type of parking strategy i.e **BestFit, Nearest and Farthest** parking strategy
