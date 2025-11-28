@@ -1,6 +1,6 @@
 """Parking ticket implementation"""
-from src.models.vehicle import Vehicle
-from parking_spot import ParkingSpot
+from models.vehicle import Vehicle
+from .parking_spot import ParkingSpot
 from datetime import datetime
 import uuid
 from typing import Optional

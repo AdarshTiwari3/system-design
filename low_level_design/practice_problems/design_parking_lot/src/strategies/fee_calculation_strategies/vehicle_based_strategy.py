@@ -1,8 +1,8 @@
 """Vehicle based price calculation"""
 
-from src.models.vehicle_size import VehicleSize
-from fee_strategy import FeeStrategy
-from src.core.parking_ticket import ParkingTicket
+from models.vehicle_size import VehicleSize
+from .fee_strategy import FeeStrategy
+from core.parking_ticket import ParkingTicket
 import math
 
 class VehicleBasedFeeStrategy(FeeStrategy):

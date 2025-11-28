@@ -1,13 +1,13 @@
 """Singleton class - Parking Manager"""
 import threading
-from parking_floor import ParkingFloor
-from parking_ticket import ParkingTicket
-from src.strategies.fee_calculation_strategies.hourly_fee_strategy import HourlyFeeStrategy
-from src.strategies.parking_strategies.nearest_first_strategy import NearestFirstParkingStrategy
+from .parking_floor import ParkingFloor
+from .parking_ticket import ParkingTicket
+from strategies.fee_calculation_strategies.hourly_fee_strategy import HourlyFeeStrategy
+from strategies.parking_strategies.nearest_first_strategy import NearestFirstParkingStrategy
 from typing import List, Dict, Self, Optional
-from src.strategies.parking_strategies.parking_strategy import ParkingStrategy
-from src.strategies.fee_calculation_strategies.fee_strategy import FeeStrategy
-from src.models.vehicle import Vehicle
+from strategies.parking_strategies.parking_strategy import ParkingStrategy
+from strategies.fee_calculation_strategies.fee_strategy import FeeStrategy
+from models.vehicle import Vehicle
 
 class ParkingLot:
     """class variables"""
