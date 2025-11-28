@@ -22,3 +22,5 @@
 5. **FeeStrategy**: defines the parking fee calculation including **HourlyFeeStrategy** and **VehicleBasedFeeStrategy**
 
 6. **ParkingStrategy**: defines the type of parking strategy i.e **BestFit, Nearest and Farthest** parking strategy
+
+7. **ParkingLot** acts as a parking manager who is responsible for parking, unparking vehicle and other operations

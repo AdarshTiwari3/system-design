@@ -2,12 +2,12 @@
 import threading
 from parking_floor import ParkingFloor
 from parking_ticket import ParkingTicket
-from hourly_fee_strategy import HourlyFeeStrategy
-from nearest_first_strategy import NearestFirstParkingStrategy
+from src.strategies.fee_calculation_strategies.hourly_fee_strategy import HourlyFeeStrategy
+from src.strategies.parking_strategies.nearest_first_strategy import NearestFirstParkingStrategy
 from typing import List, Dict, Self, Optional
-from parking_strategy import ParkingStrategy
-from fee_strategy import FeeStrategy
-from vehicle import Vehicle
+from src.strategies.parking_strategies.parking_strategy import ParkingStrategy
+from src.strategies.fee_calculation_strategies.fee_strategy import FeeStrategy
+from src.models.vehicle import Vehicle
 
 class ParkingLot:
     """class variables"""

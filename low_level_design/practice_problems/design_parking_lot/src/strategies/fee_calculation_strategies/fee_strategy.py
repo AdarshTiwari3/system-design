@@ -1,7 +1,7 @@
 """Parking Fee strategy interface"""
 
 from abc import ABC, abstractmethod
-from parking_ticket import ParkingTicket
+from src.core.parking_ticket import ParkingTicket
 class FeeStrategy(ABC):
 
     @abstractmethod

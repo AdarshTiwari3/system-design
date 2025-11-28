@@ -1,9 +1,9 @@
 """Class Implementation of Parking Floors"""
 from typing import Dict, List, Optional
 from parking_spot import ParkingSpot
-from vehicle import Vehicle
+from src.models.vehicle import Vehicle
 from collections import defaultdict
-from vehicle_size import VehicleSize
+from src.models.vehicle_size import VehicleSize
 import threading
 
 class ParkingFloor:
