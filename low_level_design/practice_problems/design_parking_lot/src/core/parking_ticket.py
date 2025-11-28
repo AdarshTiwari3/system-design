@@ -1,5 +1,5 @@
 """Parking ticket implementation"""
-from vehicle import Vehicle
+from src.models.vehicle import Vehicle
 from parking_spot import ParkingSpot
 from datetime import datetime
 import uuid

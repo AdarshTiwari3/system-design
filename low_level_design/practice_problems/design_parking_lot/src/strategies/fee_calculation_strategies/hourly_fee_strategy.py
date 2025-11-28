@@ -1,7 +1,7 @@
 """Hourly Fee Strategy Calculation"""
 
 from fee_strategy import FeeStrategy
-from parking_ticket import ParkingTicket
+from src.core.parking_ticket import ParkingTicket
 from datetime import datetime, timedelta
 import math
 class HourlyFeeStrategy(FeeStrategy):

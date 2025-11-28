@@ -1,7 +1,7 @@
 """Parking spot class where all the spot related details will be described"""
 import threading
-from vehicle_size import VehicleSize
-from vehicle import Vehicle
+from src.models.vehicle_size import VehicleSize
+from src.models.vehicle import Vehicle
 
 SIZE_RANK = {
     VehicleSize.SMALL: 0,
