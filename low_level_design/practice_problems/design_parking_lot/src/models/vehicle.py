@@ -1,6 +1,6 @@
 """Vehicle class for parking where vehicle details will be stored"""
 from abc import ABC
-from vehicle_size import VehicleSize
+from .vehicle_size import VehicleSize
 class Vehicle(ABC):
     def __init__(self, vehicle_num: str, vehicle_size: VehicleSize):
         self.vehicle_number= vehicle_num

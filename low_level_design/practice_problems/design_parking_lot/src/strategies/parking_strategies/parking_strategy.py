@@ -1,10 +1,10 @@
 """Parking Strategy - to get parking spot"""
 
 from abc import ABC, abstractmethod
-from src.core.parking_floor import ParkingFloor
+from core.parking_floor import ParkingFloor
 from typing import List, Optional
-from src.models.vehicle import Vehicle
-from src.core.parking_spot import ParkingSpot
+from models.vehicle import Vehicle
+from core.parking_spot import ParkingSpot
 
 class ParkingStrategy(ABC):
     @abstractmethod

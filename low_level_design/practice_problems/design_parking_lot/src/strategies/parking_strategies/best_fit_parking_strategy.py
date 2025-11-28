@@ -1,11 +1,11 @@
 """Best Fit Parking Strategy"""
 
-from parking_strategy import ParkingStrategy
-from src.core.parking_floor import ParkingFloor
-from src.models.vehicle import Vehicle
-from src.core.parking_spot import ParkingSpot
+from .parking_strategy import ParkingStrategy
+from core.parking_floor import ParkingFloor
+from models.vehicle import Vehicle
+from core.parking_spot import ParkingSpot
 from typing import List, Optional
-from src.models.vehicle_size import VehicleSize
+from models.vehicle_size import VehicleSize
 
 SIZE_RANK = {
     VehicleSize.SMALL: 0,
