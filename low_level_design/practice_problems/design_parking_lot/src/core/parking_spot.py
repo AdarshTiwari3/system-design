@@ -9,11 +9,11 @@ SIZE_RANK = {
     VehicleSize.LARGE: 2,
 }
 class ParkingSpot:
-    def __init__(self,parking_spot_id:str, parking_spot_size):
+    def __init__(self,parking_spot_id:str, parking_spot_size: VehicleSize):
         self.parking_spot_id=parking_spot_id
         self.parking_spot_size=parking_spot_size
-        self.is_empty=True
-        self.parked_vehicle=None
+        self.is_empty: bool =True 
+        self.parked_vehicle: Vehicle =None
         self._lock=threading.Lock()
 
 
