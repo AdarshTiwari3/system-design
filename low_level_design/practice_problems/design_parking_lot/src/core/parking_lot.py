@@ -80,6 +80,7 @@ class ParkingLot:
                 parking_ticket.get_parking_spot().unpark_the_vehicle()
                 parking_fee=self.fee_strategy.calculate_price(parking_ticket)
                 print(f"Unparking the vehicle {vehicle_number} from {parking_ticket.get_parking_spot().get_parking_spot_id()}")
-
+                print(f"Parking fee={parking_fee}")
                 return parking_fee
-            return None
+            else:
+                return None

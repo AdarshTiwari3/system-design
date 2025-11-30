@@ -15,11 +15,11 @@ LARGE parking spots:1
 -----Vehicle UK-BIKE0123 parked at parking spot p2-----
 -----Vehicle HR-TRUCK0123 parked at parking spot p4-----
 
-Ticket Number of CAR= fdf47e65-982b-4645-8004-c0b54e85a41d
+Ticket Number of CAR= 21cc6897-22aa-4ba9-accb-ed5172d9ea16
 
-Ticket Number of Bike= 20bfb8c5-eaee-4fa4-8805-5967b855785b
+Ticket Number of Bike= 43bd5d80-f83f-4099-bd54-be251b37d54d
 
-Ticket Number of Truck= 2359c86d-73b9-4024-925e-68e0e3e317b1
+Ticket Number of Truck= 2b53daaf-4d9e-4b01-aa1f-bab160027fca
 
 ------Available parking after parking some vehicles-----
 -----Floor-----1----Available-------
@@ -54,7 +54,7 @@ SMALL parking spots:1
 MEDIUM parking spots:0
 LARGE parking spots:0
 
-Active Parking= {'DL-CAR1234': <core.parking_ticket.ParkingTicket object at 0x104795160>, 'UK-BIKE0123': <core.parking_ticket.ParkingTicket object at 0x10472ed50>, 'HR-TRUCK0123': <core.parking_ticket.ParkingTicket object at 0x10472ee90>, 'UP-CAR1234': <core.parking_ticket.ParkingTicket object at 0x1047c03e0>, 'US-BIKE0123': <core.parking_ticket.ParkingTicket object at 0x1047c0510>, 'RR-TRUCK0123': <core.parking_ticket.ParkingTicket object at 0x1047430b0>}
+Active Parking= {'DL-CAR1234': <core.parking_ticket.ParkingTicket object at 0x10064d160>, 'UK-BIKE0123': <core.parking_ticket.ParkingTicket object at 0x1005d6d50>, 'HR-TRUCK0123': <core.parking_ticket.ParkingTicket object at 0x1005d6e90>, 'UP-CAR1234': <core.parking_ticket.ParkingTicket object at 0x1006743e0>, 'US-BIKE0123': <core.parking_ticket.ParkingTicket object at 0x100674510>, 'RR-TRUCK0123': <core.parking_ticket.ParkingTicket object at 0x1005faf90>}
 
  Using Vehicle Based Fee and Best Fit Parking Strategy
 -----Vehicle RJ-CAR1235 parked at parking spot p5-----
@@ -77,6 +77,9 @@ LARGE parking spots:0
 
 Exit the Vehicle
 Unparking the vehicle HR-TRUCK0123 from p4
+Parking fee=100.0
+
+Pay the parking price 100.0 for vehicle HR-TRUCK0123
 
  Total Parking Available after Exit
 -----Floor-----1----Available-------
