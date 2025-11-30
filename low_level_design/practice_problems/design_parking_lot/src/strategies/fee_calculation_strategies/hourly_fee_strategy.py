@@ -10,7 +10,8 @@ class HourlyFeeStrategy(FeeStrategy):
     def calculate_price(self, parking_ticket: ParkingTicket) -> float:
         parking_duration=parking_ticket.get_exit_time()-parking_ticket.get_entry_time()
         total_hours=math.ceil(parking_duration.total_seconds()/(60*60)) # seconds to hrs conversation and get round of ceil values
+        if total_hours==0:
+            total_hours+=1
         price_to_pay=total_hours*self.HOURLY_CHARGES
-        
         return price_to_pay
         
