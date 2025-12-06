@@ -1,15 +1,15 @@
 """Stackoverflow Post implementation"""
 """Why are using content here, because we features are common in comment post question and answer"""
-from content import Content
-from user import User
+from low_level_design.practice_problems.design_stack_overflow.src.entities.content import Content
+from low_level_design.practice_problems.design_stack_overflow.src.entities.user import User
 from typing import Dict, List
-from vote_type import VoteType
-from comments import Comment
-from post_observer import PostObserver
+from low_level_design.practice_problems.design_stack_overflow.src.enums.vote_type import VoteType
+from low_level_design.practice_problems.design_stack_overflow.src.entities.comments import Comment
+from low_level_design.practice_problems.design_stack_overflow.src.observer.post_observer import PostObserver
 import threading
-from question import Question
-from event_type import EventType
-from event import Event
+from low_level_design.practice_problems.design_stack_overflow.src.entities.question import Question
+from low_level_design.practice_problems.design_stack_overflow.src.enums.event_type import EventType
+from low_level_design.practice_problems.design_stack_overflow.src.observer.event import Event
 
 class Post(Content):
     def __init__(self, content_id: str, body: str, author: User): #we have not used post id because post id is content id so why to keep two names 
