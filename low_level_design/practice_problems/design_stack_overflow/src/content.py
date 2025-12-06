@@ -15,7 +15,7 @@ class Content(ABC):
         return self.author
     
     def get_content_id(self) -> str:
-        return self.id
+        return self.content_id
     
     def get_content_body(self) -> str:
         return self.body
