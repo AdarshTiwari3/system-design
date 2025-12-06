@@ -1,7 +1,7 @@
 """Event Class Means publisher"""
-from event_type import EventType
-from user import User
-from post import Post
+from low_level_design.practice_problems.design_stack_overflow.src.enums.event_type import EventType
+from low_level_design.practice_problems.design_stack_overflow.src.entities.user import User
+from low_level_design.practice_problems.design_stack_overflow.src.entities.post import Post
 class Event:
     def __init__(self, event_type: EventType, publisher: User, target_post: Post ): # can also be called subject or actor
         self.event_type=event_type

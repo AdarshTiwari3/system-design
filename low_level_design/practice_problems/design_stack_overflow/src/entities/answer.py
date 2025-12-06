@@ -1,6 +1,6 @@
 """Answer is also Post Type"""
-from post import Post
-from user import User
+from low_level_design.practice_problems.design_stack_overflow.src.entities.post import Post
+from low_level_design.practice_problems.design_stack_overflow.src.entities.user import User
 from uuid import uuid4
 class Answer(Post):
     def __init__(self, body: str, author: User):

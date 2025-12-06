@@ -1,7 +1,7 @@
 """Reputation Score Manager who handles the score based on activity"""
-from post_observer import PostObserver
-from event import Event
-from event_type import EventType
+from low_level_design.practice_problems.design_stack_overflow.src.observer.post_observer import PostObserver
+from low_level_design.practice_problems.design_stack_overflow.src.observer.event import Event
+from low_level_design.practice_problems.design_stack_overflow.src.enums.event_type import EventType
 
 class ReputationScoreManager(PostObserver):
     QUESTION_UPVOTED_SCORE = 10

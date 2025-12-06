@@ -1,10 +1,10 @@
 """Question class implementation which inherits some property of Post class as it is also a post type"""
-from post import Post
-from user import User
-from tag import Tag
-from answer import Answer
-from event import Event
-from event_type import EventType
+from low_level_design.practice_problems.design_stack_overflow.src.entities.post import Post
+from low_level_design.practice_problems.design_stack_overflow.src.entities.user import User
+from low_level_design.practice_problems.design_stack_overflow.src.entities.tag import Tag
+from low_level_design.practice_problems.design_stack_overflow.src.entities.answer import Answer
+from low_level_design.practice_problems.design_stack_overflow.src.observer.event import Event
+from low_level_design.practice_problems.design_stack_overflow.src.enums.event_type import EventType
 from typing import List, Set, Optional
 from uuid import uuid4
 
@@ -44,7 +44,7 @@ class Question(Post):
             event = Event(EventType.ACCEPT_ANSWER, self.get_content_author(), answer)
 
             self.notify_observer(event)
-            
+
             return True
 
     def get_accepted_answer(self) -> Optional[Answer]:

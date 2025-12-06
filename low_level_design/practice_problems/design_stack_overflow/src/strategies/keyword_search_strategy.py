@@ -1,7 +1,7 @@
 """Keyword Search"""
 
-from search_strategy import SearchStrategy
-from question import Question
+from low_level_design.practice_problems.design_stack_overflow.src.strategies.search_strategy import SearchStrategy
+from low_level_design.practice_problems.design_stack_overflow.src.entities.question import Question
 from typing import List
 
 class KeywordSearchStrategy(SearchStrategy):
