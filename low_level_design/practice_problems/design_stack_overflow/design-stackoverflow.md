@@ -15,19 +15,35 @@
 6. The system must support multiple users accessing it at the same time, while keeping all data accurate and consistent.
 
 
-### Identify Core Objects
+## Identify Core Objects
 
-1. **User**- This represents the user of stack overflow.
+### 1. User
+Represents a person using the platform, with a unique ID, username, reputation score.
 
-2. **Question**- 
+### 2. Question
+A post created by a user asking for help or information. Contains title, body, tags, list of answers, votes, and comments.
 
-3. **Answer**- 
+### 3. Answer
+A reply to a question posted by another user. Can be upvoted, downvoted, commented on, and marked as an accepted answer.
 
-4. **Tag**- 
+### 4. Tag
+A label attached to questions for categorization and improved search, e.g., `Python`, `LLD`, `System Design`.
 
-5. **Vote**-
+### 5. VoteType
+Enum defining valid vote types:
+- `UPVOTE`
+- `DOWNVOTE`
 
-6. **VoteType**-
+### 6. Comment
+A short text added to a question or answer for clarification or discussion.
 
-7. **Comment**-
+---
 
+## Additional Notes (Short)
+
+- Use an **Observer** to update reputation when votes and accepted answers occur.  
+- Use a **Strategy** pattern for searching questions (by keyword, tag, or user).  
+- A **Facade** can expose simple operation(ask question, answer, vote, comment, search).  
+- Use thread-safe operations or locks for vote and reputation consistency.
+
+---
