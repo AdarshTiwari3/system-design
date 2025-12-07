@@ -15,7 +15,7 @@ class StackOverflowFacade:
         self.reputation_manager = ReputationScoreManager()
         self._lock = threading.Lock()
 
-    def create_user(self, username: str) -> User:
+    def create_user(self, username: str) -> List[User]:
         with self._lock:
             user = User(username)
             self.users[user.get_user_id()] = user
