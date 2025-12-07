@@ -1,6 +1,6 @@
 """Content- Abstract class that will be used in Question, Answer, Comment and Post"""
 from abc import ABC
-from low_level_design.practice_problems.design_stack_overflow.src.entities.user import User
+from entities.user import User
 from datetime import datetime
 
 class Content(ABC):

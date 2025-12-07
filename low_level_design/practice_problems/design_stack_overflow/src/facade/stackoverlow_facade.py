@@ -102,12 +102,9 @@ class StackOverflowFacade:
         Apply search strategies sequentially to filter questions.
         Returns list of matching questions.
         """
-        results = list(self.questions.values())
-
-        if not strategies:
-            return results
-
+        all_questions = list(self.questions.values())
+        result_set = set()
         for strategy in strategies:
-            results = strategy.search(results)
-
-        return results
+            for q in strategy.search(all_questions):
+                result_set.add(q)
+        return list(result_set)

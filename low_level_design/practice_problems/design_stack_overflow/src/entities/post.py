@@ -1,15 +1,16 @@
 """Stackoverflow Post implementation"""
 """Why are using content here, because we features are common in comment post question and answer"""
-from low_level_design.practice_problems.design_stack_overflow.src.entities.content import Content
-from low_level_design.practice_problems.design_stack_overflow.src.entities.user import User
-from typing import Dict, List
-from low_level_design.practice_problems.design_stack_overflow.src.enums.vote_type import VoteType
-from low_level_design.practice_problems.design_stack_overflow.src.entities.comments import Comment
-from low_level_design.practice_problems.design_stack_overflow.src.observer.post_observer import PostObserver
+from entities.content import Content
+from entities.user import User
+from typing import Dict, List, TYPE_CHECKING
+from enums.vote_type import VoteType
+from entities.comments import Comment
+from observer.post_observer import PostObserver
 import threading
-from low_level_design.practice_problems.design_stack_overflow.src.entities.question import Question
-from low_level_design.practice_problems.design_stack_overflow.src.enums.event_type import EventType
-from low_level_design.practice_problems.design_stack_overflow.src.observer.event import Event
+from enums.event_type import EventType
+from observer.event import Event
+
+
 
 class Post(Content):
     def __init__(self, content_id: str, body: str, author: User): #we have not used post id because post id is content id so why to keep two names 
@@ -39,6 +40,7 @@ class Post(Content):
         self.comments.append(new_comment)
 
     def vote(self, user: User, vote_type: VoteType):
+        from entities.question import Question #avoid circular imports
         #perform voting on a post
         with self._lock:
             userid=user.get_user_id()
