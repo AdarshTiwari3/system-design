@@ -1,6 +1,6 @@
 """Stack Overflow Client runner- main function"""
 from facade.stackoverlow_facade import StackOverflowFacade
-from entities import Tag, Question, User
+from entities import Tag, User
 from strategies import *
 from enums import VoteType
 from typing import Set, List
@@ -10,13 +10,13 @@ class StackOverflowClient:
         self.stackoverflow_facade=StackOverflowFacade()
 
 
-    def create_users(self):
+    def create_users(self) -> User:
         johndoe=self.stackoverflow_facade.create_user("John Doe")
         smith=self.stackoverflow_facade.create_user("Alex Smith")
         hyper_xoxo=self.stackoverflow_facade.create_user("Hyper Xoxo Royan")
         return johndoe, smith, hyper_xoxo
 
-    def create_tags(self):
+    def create_tags(self) -> Set[Tag]:
         python=Tag("Python")
         system_design=Tag("System Design")
         lld=Tag("LLD")
