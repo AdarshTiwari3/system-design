@@ -1,10 +1,10 @@
 """Question class implementation which inherits some property of Post class as it is also a post type"""
-from low_level_design.practice_problems.design_stack_overflow.src.entities.post import Post
-from low_level_design.practice_problems.design_stack_overflow.src.entities.user import User
-from low_level_design.practice_problems.design_stack_overflow.src.entities.tag import Tag
-from low_level_design.practice_problems.design_stack_overflow.src.entities.answer import Answer
-from low_level_design.practice_problems.design_stack_overflow.src.observer.event import Event
-from low_level_design.practice_problems.design_stack_overflow.src.enums.event_type import EventType
+from entities.post import Post
+from entities.user import User
+from entities.tag import Tag
+from entities.answer import Answer
+from observer.event import Event
+from enums.event_type import EventType
 from typing import List, Set, Optional
 from uuid import uuid4
 

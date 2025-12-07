@@ -1,0 +1,32 @@
+Running Stackoverflow LLD Problem
+------Votes------
+Question 1: 'How to implement Observer Pattern?' -> votes: 1
+Answer 1 (by Alex Smith) -> votes: 1
+Answer 2 (by Hyper Xoxo Royan) -> votes: 1
+
+Question 2: 'Best practices for LLD in Python?' -> votes: 0
+Answer 3 (by Alex Smith) -> votes: 0
+Answer 4 (by Hyper Xoxo Royan) -> votes: 2
+
+------Reputation------
+John Doe: 17
+Alex Smith: 33
+Hyper Xoxo Royan: 45
+
+------Search Results------
+Question: How to implement Observer Pattern?
+Question ID: e790359e-8588-4ecd-90fb-e138fa0c1a51
+Title     : How to implement Observer Pattern?
+Author    : John Doe
+Votes     : 1
+Tags      : LLD, Python, System Design, Stack Overflow Problem
+Answers   : 2
+--------------------------------------------------
+Question: Best practices for LLD in Python?
+Question ID: 7be8f90a-3f2f-41fc-bb4e-31f029897252
+Title     : Best practices for LLD in Python?
+Author    : John Doe
+Votes     : 0
+Tags      : LLD, Python
+Answers   : 2
+--------------------------------------------------

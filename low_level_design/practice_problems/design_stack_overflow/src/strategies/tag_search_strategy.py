@@ -1,8 +1,8 @@
 """Tag Search Strategy Implementation"""
 
-from low_level_design.practice_problems.design_stack_overflow.src.strategies.search_strategy import SearchStrategy
-from low_level_design.practice_problems.design_stack_overflow.src.entities.tag import Tag
-from low_level_design.practice_problems.design_stack_overflow.src.entities.question import Question
+from strategies.search_strategy import SearchStrategy
+from entities.tag import Tag
+from entities.question import Question
 from typing import List
 class TagSearchStrategy(SearchStrategy):
     def __init__(self, tag: Tag):
