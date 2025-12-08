@@ -1,0 +1,1 @@
+"""Why strategy because-  Context (which uses the strategy) → LogAppender"""
