@@ -1,0 +1,10 @@
+Running logger framework LLD problem
+[2025-12-10 20:41:33.687820] [DEBUG] [payment.service] [MainThread] Debugging payment flow...
+[2025-12-10 20:41:33.687853] [INFO] [payment.service] [MainThread] Payment request created
+[2025-12-10 20:41:33.687865] [WARNING] [payment.service] [MainThread] High latency detected
+[2025-12-10 20:41:33.687873] [ERROR] [payment.service] [MainThread] Payment failed
+[2025-12-10 20:41:33.687880] [FATAL] [payment.service] [MainThread] Critical failure: shutting down system
+[2025-12-10 20:41:33.687934] [INFO] [payment.service] [MainThread] Payment started
+{"timestamp": "2025-12-10T20:41:33.687934", "level": "INFO", "logger": "payment.service", "thread": "MainThread", "message": "Payment started"}
+[2025-12-10 20:41:33.687970] [ERROR] [payment.service] [MainThread] Payment failed due to insufficient balance
+{"timestamp": "2025-12-10T20:41:33.687970", "level": "ERROR", "logger": "payment.service", "thread": "MainThread", "message": "Payment failed due to insufficient balance"}

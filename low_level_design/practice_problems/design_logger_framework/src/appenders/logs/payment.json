@@ -1,0 +1,2 @@
+{"timestamp": "2025-12-10T22:11:21.828389", "level": "INFO", "logger": "payment.service", "thread": "MainThread", "message": "Payment started"}
+{"timestamp": "2025-12-10T22:11:21.828430", "level": "ERROR", "logger": "payment.service", "thread": "MainThread", "message": "Payment failed due to insufficient balance"}
