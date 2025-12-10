@@ -11,6 +11,7 @@ import threading
 from appenders.log_appender_interface import LogAppender
 from strategies.log_formatter_strategy import LogFormatterStrategy
 from log_message import LogMessage
+import os
 
 class FileAppender(LogAppender):
     def __init__(self,file_path:str, formatter: LogFormatterStrategy | None = None):
@@ -22,8 +23,16 @@ class FileAppender(LogAppender):
         super().__init__(formatter)
         self.file_path = file_path
         self._lock = threading.Lock()
+        base_path = os.path.dirname(os.path.abspath(__file__))
 
-        self._file = open(self.file_path, "a", encoding="utf-8")
+        # Build full path relative to this folder
+        self.full_path = os.path.join(base_path, file_path)
+
+        directory = os.path.dirname(self.full_path)
+        if directory and not os.path.exists(directory):
+            os.makedirs(directory)
+
+        self._file = open(self.full_path, "a", encoding="utf-8")
 
     def append(self, log_message: LogMessage):
         """Write formatted log message into the file safely."""
