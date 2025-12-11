@@ -1,5 +1,5 @@
 """Client"""
-from log_manager import LogManager
+from core.log_manager import LogManager
 from enums.log_level import LogLevel
 from appenders.console_log_appender import ConsoleAppender
 from appenders.file_log_appender import FileAppender

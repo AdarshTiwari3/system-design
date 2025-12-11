@@ -10,6 +10,25 @@
 
 ## Identify Core Objects
 
-1. **LogLevel**- enum for log levels i.e DEBUG, ERROR, WARNING and others
+1. **LogLevel** – Enum representing supported log severity levels (e.g., DEBUG, ERROR, FATAL).  
 
-2. **LogMessage**- Represents a single log entry
+2. **LogMessage** – Represents a single log entry containing timestamp, level, message, logger name, and thread name.  
+
+3. **LogFormatter** – Converts a LogMessage into a formatted output string. Implemented using the Strategy Pattern (e.g., JSON formatter, text formatter).  
+
+4. **LogAppender** – Writes formatted logs to destinations such as console, file, or database.  
+
+5. **Logger** – Creates log messages and routes them to configured appenders based on log level.  
+
+6. **LogManager** – Singleton that manages loggers, maintains the root logger, and handles global configuration.
+
+### Optional
+
+7. **AsyncLogProcessor** – Optional component that processes log writes using a background thread to improve performance under high load.
+
+---
+
+## Design Patterns Used
+
+1. **Singleton** – Used for creating and managing the global LogManager instance.  
+2. **Strategy** – Used for interchangeable log formatters (JSON, text, etc.).

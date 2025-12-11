@@ -1,5 +1,5 @@
 from strategies.log_formatter_strategy import LogFormatterStrategy
-from log_message import LogMessage
+from core.log_message import LogMessage
 
 class TextFormatterStrategy(LogFormatterStrategy):
     def format(self, log_message: LogMessage) -> str:

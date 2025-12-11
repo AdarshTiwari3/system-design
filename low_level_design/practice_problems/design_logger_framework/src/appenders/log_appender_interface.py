@@ -1,6 +1,6 @@
 """Log Appender Interface- An Appender receives a formatted LogMessage and writes it somewhere — console, file, database, network, etc."""
 from abc import ABC, abstractmethod
-from log_message import LogMessage
+from core.log_message import LogMessage
 from strategies.log_formatter_strategy import LogFormatterStrategy
 from strategies.text_formatter_strategy import TextFormatterStrategy
 

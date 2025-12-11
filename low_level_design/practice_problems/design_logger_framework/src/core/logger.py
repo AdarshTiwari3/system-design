@@ -2,7 +2,7 @@
 from typing import Optional, List
 from enums.log_level import LogLevel
 from appenders.log_appender_interface import LogAppender
-from log_message import LogMessage
+from core.log_message import LogMessage
 class Logger:
     """The Logger creates log messages, while the Appender decides where those messages go."""
 

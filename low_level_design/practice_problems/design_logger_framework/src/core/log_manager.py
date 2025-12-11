@@ -1,7 +1,7 @@
 """LogManager- singleton class"""
 import threading
 from typing import Dict, Self
-from logger import Logger
+from core.logger import Logger
 class LogManager:
     _instance: 'LogManager | None'=None
     _lock=threading.Lock()
