@@ -10,7 +10,7 @@ server.log
 import threading
 from appenders.log_appender_interface import LogAppender
 from strategies.log_formatter_strategy import LogFormatterStrategy
-from log_message import LogMessage
+from core.log_message import LogMessage
 import os
 
 class FileAppender(LogAppender):

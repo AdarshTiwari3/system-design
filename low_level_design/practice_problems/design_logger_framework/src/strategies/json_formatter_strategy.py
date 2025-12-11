@@ -1,7 +1,7 @@
 """Log Formatter strategy- JsonFormatter"""
 
 from strategies.log_formatter_strategy import LogFormatterStrategy
-from log_message import LogMessage
+from core.log_message import LogMessage
 import json
 
 class JsonFormatterStrategy(LogFormatterStrategy):

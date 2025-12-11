@@ -5,3 +5,10 @@
 [2025-12-10 22:11:21.828336] [FATAL] [payment.service] [MainThread] Critical failure: shutting down system
 [2025-12-10 22:11:21.828389] [INFO] [payment.service] [MainThread] Payment started
 [2025-12-10 22:11:21.828430] [ERROR] [payment.service] [MainThread] Payment failed due to insufficient balance
+[2025-12-11 10:09:49.608571] [DEBUG] [payment.service] [MainThread] Debugging payment flow...
+[2025-12-11 10:09:49.608629] [INFO] [payment.service] [MainThread] Payment request created
+[2025-12-11 10:09:49.608649] [WARNING] [payment.service] [MainThread] High latency detected
+[2025-12-11 10:09:49.608659] [ERROR] [payment.service] [MainThread] Payment failed
+[2025-12-11 10:09:49.608667] [FATAL] [payment.service] [MainThread] Critical failure: shutting down system
+[2025-12-11 10:09:49.608718] [INFO] [payment.service] [MainThread] Payment started
+[2025-12-11 10:09:49.608783] [ERROR] [payment.service] [MainThread] Payment failed due to insufficient balance

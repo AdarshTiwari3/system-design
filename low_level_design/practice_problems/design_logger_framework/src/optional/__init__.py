@@ -1,0 +1,1 @@
+"""This is an optional improvement, if you want the logger to be asycn in nature currently it is synchronous in nature"""
