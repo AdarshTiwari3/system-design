@@ -3,7 +3,7 @@ from typing import TYPE_CHECKING
 from state.intersection_state_interface import IntersectionState
 from enums.direction import Direction
 from enums.signal_color import SignalColor
-from state.east_west_green_state import EastWestGreenState
+
 import time
 
 if TYPE_CHECKING: #lazy import
@@ -43,6 +43,7 @@ class NorthSouthGreenState(IntersectionState):
         context.get_light(Direction.SOUTH).transition()
 
         #move to next intersection state 
+        from state.east_west_green_state import EastWestGreenState #Lazy import 
         context.set_current_state(EastWestGreenState())
 
         

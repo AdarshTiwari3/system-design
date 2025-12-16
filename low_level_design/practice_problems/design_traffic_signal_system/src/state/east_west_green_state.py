@@ -5,7 +5,6 @@ from state.intersection_state_interface import IntersectionState
 from enums.direction import Direction
 from enums.signal_color import SignalColor
 import time
-from state.north_south_green_state import NorthSouthGreenState
 
 if TYPE_CHECKING: #lazy import
     from intersection_controller import IntersectionController
@@ -37,6 +36,9 @@ class EastWestGreenState(IntersectionState):
 
         #set the other state as true i.e NorthSouth state for traffic light
 
+        # 🔁 Lazy import HERE
+        from state.north_south_green_state import NorthSouthGreenState
+       
         context.set_current_state(NorthSouthGreenState())
 
         
