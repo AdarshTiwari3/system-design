@@ -3,14 +3,15 @@ from typing import TYPE_CHECKING
 from state.intersection_state_interface import IntersectionState
 from enums.direction import Direction
 from enums.signal_color import SignalColor
-from state.east_west_green_state import EastWestGreenState
-import time
+
+
 
 if TYPE_CHECKING: #lazy import
-    from intersection_controller import IntersectionController
+    from core.intersection_controller import IntersectionController
 
 class NorthSouthGreenState(IntersectionState):
     def handle(self, context: "IntersectionController"):
+        print("North-South Intersection running")
         #turn the green light on for north south traffic light
         context.get_light(Direction.NORTH).start_green()
         context.get_light(Direction.SOUTH).start_green()
@@ -22,27 +23,32 @@ class NorthSouthGreenState(IntersectionState):
 
         #simulate green light signal for its duration
 
-        green_light_duration=context.get_green_time()
+        print("Light getting turned on Green")
+        # context.wait(context.get_green_time())
+        print(f"Turned on for {context.get_green_time()} second")
+        
 
-        time.sleep(green_light_duration)
 
         #transition to yellow light from green
-
+        print("Light getting Turned on Yellow")
         context.get_light(Direction.NORTH).transition()
         context.get_light(Direction.SOUTH).transition()
 
         #yellow time duration
 
-        yellow_light_duration=context.get_yellow_time()
+        # context.wait(context.get_yellow_time())
+        print(f"Turned on for {context.get_yellow_time()} second")
+        
 
-        time.sleep(yellow_light_duration)
+
 
         #move to next transition from yellow to red
-
+        print("Moving to red light")
         context.get_light(Direction.NORTH).transition()
         context.get_light(Direction.SOUTH).transition()
 
         #move to next intersection state 
+        from state.east_west_green_state import EastWestGreenState #Lazy import 
         context.set_current_state(EastWestGreenState())
 
         

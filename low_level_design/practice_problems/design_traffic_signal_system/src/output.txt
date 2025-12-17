@@ -1,0 +1,43 @@
+Running Traffic System
+Starting Intersection Controller [intersection-01]
+
+East-West Intersection running🚦 Traffic system started
+
+
+Light getting turned on Green
+▶ Running normal traffic flow
+Turned on for 10 second
+Light getting Turned on Yellow
+
+Turned on for 5 second
+Moving to next state
+Moving to Red
+
+🚦 Traffic surge detected → extending green time
+
+North-South Intersection running
+Light getting turned on Green
+Turned on for 15 second
+Light getting Turned on Yellow
+Turned on for 5 second
+Moving to red light
+🚨 Emergency vehicle approaching from NORTH
+
+🚨 EMERGENCY on NORTH 🚨
+Turned on Green for emergency direction
+🚦 Emergency cleared, resuming normal operation
+
+🚦 Emergency cleared, restoring normal flow
+Turned on Yellow
+Moving to Red and returing to normal flow
+
+East-West Intersection running
+Light getting turned on Green
+Turned on for 18 second
+Light getting Turned on Yellow
+Turned on for 5 second
+Moving to next state
+Moving to Red
+🛑 Shutting down traffic system
+
+✅ Traffic system stopped cleanly

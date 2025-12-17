@@ -16,7 +16,7 @@ class TrafficLight:
 
 
     def set_next_state(self, state: SignalState):
-        self._current_state=state
+        self._next_state = state
 
     def get_current_color(self) -> SignalColor:
         return self._current_color
@@ -27,11 +27,21 @@ class TrafficLight:
     #will be used by intersection controller
     def start_green(self):
         # starts the green yellow red lights
-        self._current_state=GreenState()
+        if not isinstance(self._current_state, RedState):
+            raise RuntimeError("Green can only start from Red")
+        self._current_state = GreenState()
         self._current_state.handle(self) #passes self=Traffic Signal as context
 
     def transition(self):
-        #just move the current state to next state i.e Green to Yellow and Yellow to Red
+        if not self._next_state:
+            raise RuntimeError("Invalid signal transition")
 
-        self._current_state=self._next_state
+        self._current_state = self._next_state
+        self._next_state = None
+        self._current_state.handle(self)
+
+    def force_red(self):
+        # Emergency situation override – bypass normal cycle safely
+        self._current_state = RedState()
+        self._next_state = None
         self._current_state.handle(self)

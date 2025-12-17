@@ -5,7 +5,7 @@ from enums.signal_color import SignalColor
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from traffic_light import TrafficLight
+    from core.traffic_light import TrafficLight
 
 class RedState(SignalState):
     def handle(self, context: "TrafficLight"):

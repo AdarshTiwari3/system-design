@@ -4,7 +4,7 @@ from abc import ABC, abstractmethod
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING: #lazy import
-    from intersection_controller import IntersectionController
+    from core.intersection_controller import IntersectionController
     
 class IntersectionState(ABC):
     @abstractmethod
