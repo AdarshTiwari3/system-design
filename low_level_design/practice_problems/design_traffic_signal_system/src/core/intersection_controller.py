@@ -13,8 +13,8 @@ class IntersectionController:
         self._green_time=green_time
         self._yellow_time=yellow_time
         self._current_state: IntersectionState =EastWestGreenState()
-        self._is_running=True
-        self._emergency_active = False
+        self._is_running :bool =True
+        self._emergency_active :bool= False
         self._lock = threading.Lock()
         self._condition = threading.Condition(self._lock)
 
