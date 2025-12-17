@@ -1,10 +1,9 @@
 from typing import Dict
 from state.intersection_state_interface import IntersectionState
 from state.east_west_green_state import EastWestGreenState
-from traffic_light import TrafficLight
+from core.traffic_light import TrafficLight
 from enums.direction import Direction
 import threading
-import time
 
 
 class IntersectionController:
@@ -17,6 +16,8 @@ class IntersectionController:
         self._is_running=True
         self._emergency_active = False
         self._lock = threading.Lock()
+        self._condition = threading.Condition(self._lock)
+
 
     def get_id(self) -> str:
         return self._id
@@ -28,6 +29,7 @@ class IntersectionController:
     def set_current_state(self, state: IntersectionState):
         with self._lock:
             self._current_state = state
+            self._condition.notify_all() #Something important changed — wake up NOW from time.sleep()
 
     def get_green_time(self) -> int:
         return self._green_time
@@ -45,21 +47,29 @@ class IntersectionController:
             with self._lock:
                 if not self._is_running:
                     break
-                current_state = self._current_state
+                state = self._current_state
 
-            try:
-                # handle() is intentionally OUTSIDE lock
-                # to avoid long lock holding during sleep()
-                current_state.handle(self)
+            # execute ONE state step
+            state.handle(self)
 
-            except Exception as e:
-                print(f"Intersection {self._id} encountered an error: {e}")
-                self.stop()
-            time.sleep(0.1) 
+            # controller-controlled wait
+            duration = self._green_time
+            elapsed = 0
+
+            while elapsed < duration:
+                with self._condition:
+                    self._condition.wait(timeout=1)
+
+                
+                if self._emergency_active:
+                    break
+
+                elapsed += 1
 
     def stop(self):
         with self._lock:
             self._is_running = False
+            self._condition.notify_all()
 
     def trigger_emergency(self, direction: Direction):
         with self._lock:
@@ -72,10 +82,12 @@ class IntersectionController:
             from state.emergency_state import EmergencyState #Lazy Import to Avoid Circular import error
 
             self._current_state = EmergencyState(direction, previous_state)
+            self._condition.notify_all()
 
     def clear_emergency(self):
         with self._lock:
             self._emergency_active = False
+            self._condition.notify_all()
 
     def is_emergency_active(self) -> bool:
         with self._lock:
@@ -86,6 +98,7 @@ class IntersectionController:
             if green_time <= 0:
                 raise ValueError("Green time must be positive")
             self._green_time = green_time
+            self._condition.notify_all()
 
     def update_yellow_time(self, yellow_time: int):
         with self._lock:
@@ -99,3 +112,7 @@ class IntersectionController:
                 raise ValueError("Durations must be positive")
             self._green_time = green_time
             self._yellow_time = yellow_time
+
+    def wait(self, timeout):
+        with self._condition:
+            self._condition.wait(timeout=timeout)

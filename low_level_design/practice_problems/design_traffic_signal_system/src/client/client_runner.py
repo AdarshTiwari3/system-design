@@ -1,10 +1,10 @@
 """Client Runner"""
 
 import threading
-from intersection_controller import IntersectionController
-from traffic_light import TrafficLight
+from core.intersection_controller import IntersectionController
+from core.traffic_light import TrafficLight
 from enums.direction import Direction
-import time
+
 def main():
 
     traffic_lights = {
@@ -20,7 +20,7 @@ def main():
     # 3️⃣ Start controller in a background thread
     controller_thread = threading.Thread(
         target=controller.run,
-        daemon=True
+        # daemon=True
     )
     controller_thread.start()
 
@@ -28,22 +28,25 @@ def main():
 
     print("▶ Running normal traffic flow\n")
 
-    time.sleep(20)
+    controller.wait(20)
 
-    print("🚦 Traffic surge detected → extending green time\n")
+    print("\n🚦 Traffic surge detected → extending green time\n")
     controller.update_durations(green_time=15, yellow_time=5)
 
-    time.sleep(25)
+    controller.wait(20)
 
     print("🚨 Emergency vehicle approaching from NORTH\n")
     controller.trigger_emergency(Direction.NORTH)
 
-    time.sleep(15)
+    controller.wait(20)
 
     print("🚦 Emergency cleared, resuming normal operation\n")
     controller.clear_emergency()
 
-    time.sleep(15)
+    controller.wait(30)
+
+    controller.update_durations(green_time=18, yellow_time=5)
+    controller.wait(30)
 
     print("🛑 Shutting down traffic system\n")
     controller.stop()

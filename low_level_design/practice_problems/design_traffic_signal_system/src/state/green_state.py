@@ -6,7 +6,7 @@ from state.yellow_state import YellowState
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from traffic_light import TrafficLight
+    from core.traffic_light import TrafficLight
 
 class GreenState(SignalState):
     def handle(self, context: "TrafficLight"):

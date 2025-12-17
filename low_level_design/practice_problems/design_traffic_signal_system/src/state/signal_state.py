@@ -4,7 +4,7 @@ from abc import ABC, abstractmethod
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from traffic_light import TrafficLight
+    from core.traffic_light import TrafficLight
     
 class SignalState(ABC):
     @abstractmethod
