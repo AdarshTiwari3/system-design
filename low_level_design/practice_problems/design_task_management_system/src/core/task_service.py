@@ -3,11 +3,11 @@ from core.task import Task
 from typing import Dict, Set
 class TaskService:
     """From the current task state, which states am I allowed to move to- PENDING → IN_PROGRESS
-    IN_PROGRESS → COMPLETED
-    IN_PROGRESS → BLOCKED
-    BLOCKED → IN_PROGRESS
-    COMPLETED → NOTHING
-
+    
+    PENDING      → IN_PROGRESS
+    IN_PROGRESS  → COMPLETED | BLOCKED | PENDING
+    BLOCKED      → IN_PROGRESS | PENDING
+    COMPLETED    → NOTHING (terminal)
 
     """
     VALID_TRANSITIONS: Dict[TaskStatus,Set[TaskStatus]] = {
