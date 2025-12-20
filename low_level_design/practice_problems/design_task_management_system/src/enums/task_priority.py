@@ -6,10 +6,6 @@ class TaskPriority(Enum):
     HIGH = ("HIGH", 3)
     CRITICAL = ("CRITICAL", 4)
 
-    def __init__(self, label, level):
-        self.label = label
-        self.level = level
-
 
     @property
     def label(self) -> str:
