@@ -1,8 +1,20 @@
 """Activity Observer- concrete class"""
 
 from observer.task_observer import TaskObserver
+from core.activity_logs import ActivityLog
+from enums.task_event_type import TaskEventType
+from core.task import Task
 
 class ActivityObserver(TaskObserver):
-    def update(self, task, event_type):
-        event = event_type.value if hasattr(event_type, "value") else event_type #checks if event type has enum values or not
-        print(f"Logger - Task '{task.get_title()}' was changed, change={event}")
+    def __init__(self):
+        self._logs: list[ActivityLog] = []
+
+    def update(self, task: Task, event_type: TaskEventType):
+        log = ActivityLog(
+            description=f"{event_type.value} on task '{task.title}'"
+        )
+        self._logs.append(log)
+        print(log)
+
+    def get_logs(self) -> list[ActivityLog]:
+        return self._logs.copy()
