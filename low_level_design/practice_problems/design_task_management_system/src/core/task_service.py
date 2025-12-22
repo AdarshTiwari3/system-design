@@ -4,6 +4,7 @@ from typing import Dict, Set, List
 from observer.task_observer import TaskObserver
 from enums.task_event_type import TaskEventType
 from entities.user import User
+import threading 
 
 class TaskService:
     """From the current task state, which states am I allowed to move to- PENDING → IN_PROGRESS
@@ -22,6 +23,7 @@ class TaskService:
     }
     def __init__(self):
         self._observers: List[TaskObserver] = []
+        self._lock=threading.Lock()
 
 
     def add_observer(self, observer: TaskObserver):
@@ -36,8 +38,9 @@ class TaskService:
             observer.update(task, event_type)
 
     def assign(self, task: Task, user: User ,expected_version: int):
-        self._check_version(task, expected_version)
-        task._assign(user)
+        with self._lock:
+            self._check_version(task, expected_version)
+            task._assign(user)
         self._notify(task, TaskEventType.ASSIGNEE_CHANGED)
 
 
@@ -52,21 +55,22 @@ class TaskService:
 
 
     def _transition(self, task: Task, new_status: TaskStatus, expected_version: int):
-        self._check_version(task, expected_version)
+        with self._lock:
+            self._check_version(task, expected_version)
 
-        current_status = task.status
+            current_status = task.status
 
-        if current_status.is_terminal():
-            raise RuntimeError("Completed task cannot be modified")
+            if current_status.is_terminal():
+                raise RuntimeError("Completed task cannot be modified")
 
-        allowed_next_states = self.VALID_TRANSITIONS[current_status]
+            allowed_next_states = self.VALID_TRANSITIONS[current_status]
 
-        if new_status not in allowed_next_states:
-            raise RuntimeError(
-                f"Invalid transition from {current_status.value} to {new_status.value}"
-            )
+            if new_status not in allowed_next_states:
+                raise RuntimeError(
+                    f"Invalid transition from {current_status.value} to {new_status.value}"
+                )
 
-        task._set_status(new_status)
+            task._set_status(new_status)
         self._notify(task,TaskEventType.STATUS_CHANGED)
         
 
