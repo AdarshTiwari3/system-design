@@ -6,34 +6,34 @@ Running Task Management System LLD Problem
 ------Initial Tasks-----
 
 ===== Task List: Sprint Backlog =====
----32785a3b-77ce-407d-8038-2a6729b43935|---Design Task Management System|Status: PENDING | Priority: HIGH | Assignee: Andy Romio
----33c9ee64-5cc6-41e4-a58f-f11da98784f5|---Implement Optimistic Locking|Status: PENDING | Priority: CRITICAL | Assignee: John Doe
+---319b529d-4f2e-4031-8033-f86e3132be6f|---Design Task Management System|Status: PENDING | Priority: HIGH | Assignee: Andy Romio
+---4e8a833f-4be7-48ed-83a9-5f5d7b566198|---Implement Optimistic Locking|Status: PENDING | Priority: CRITICAL | Assignee: John Doe
 =====================================
 
-[2025-12-22 18:13:13.648311] - STATUS_CHANGED on task 'Design Task Management System'
+[2025-12-24 10:15:48.685557] - STATUS_CHANGED on task 'Design Task Management System'
 After starting Task 1:
 
 ===== Task List: Sprint Backlog =====
----32785a3b-77ce-407d-8038-2a6729b43935|---Design Task Management System|Status: IN_PROGRESS | Priority: HIGH | Assignee: Andy Romio
----33c9ee64-5cc6-41e4-a58f-f11da98784f5|---Implement Optimistic Locking|Status: PENDING | Priority: CRITICAL | Assignee: John Doe
+---319b529d-4f2e-4031-8033-f86e3132be6f|---Design Task Management System|Status: IN_PROGRESS | Priority: HIGH | Assignee: Andy Romio
+---4e8a833f-4be7-48ed-83a9-5f5d7b566198|---Implement Optimistic Locking|Status: PENDING | Priority: CRITICAL | Assignee: John Doe
 =====================================
 
-[2025-12-22 18:13:13.648328] - STATUS_CHANGED on task 'Design Task Management System'
+[2025-12-24 10:15:48.685574] - STATUS_CHANGED on task 'Design Task Management System'
 After completing Task 1:
 
 ===== Task List: Sprint Backlog =====
----32785a3b-77ce-407d-8038-2a6729b43935|---Design Task Management System|Status: COMPLETED | Priority: HIGH | Assignee: Andy Romio
----33c9ee64-5cc6-41e4-a58f-f11da98784f5|---Implement Optimistic Locking|Status: PENDING | Priority: CRITICAL | Assignee: John Doe
+---319b529d-4f2e-4031-8033-f86e3132be6f|---Design Task Management System|Status: COMPLETED | Priority: HIGH | Assignee: Andy Romio
+---4e8a833f-4be7-48ed-83a9-5f5d7b566198|---Implement Optimistic Locking|Status: PENDING | Priority: CRITICAL | Assignee: John Doe
 =====================================
 
 Demonstrating optimistic locking failure:
-[2025-12-22 18:13:13.648388] - STATUS_CHANGED on task 'Implement Optimistic Locking'
+[2025-12-24 10:15:48.685590] - STATUS_CHANGED on task 'Implement Optimistic Locking'
 
  After Task 2 started the Tasks:
 
 ===== Task List: Sprint Backlog =====
----32785a3b-77ce-407d-8038-2a6729b43935|---Design Task Management System|Status: COMPLETED | Priority: HIGH | Assignee: Andy Romio
----33c9ee64-5cc6-41e4-a58f-f11da98784f5|---Implement Optimistic Locking|Status: IN_PROGRESS | Priority: CRITICAL | Assignee: John Doe
+---319b529d-4f2e-4031-8033-f86e3132be6f|---Design Task Management System|Status: COMPLETED | Priority: HIGH | Assignee: Andy Romio
+---4e8a833f-4be7-48ed-83a9-5f5d7b566198|---Implement Optimistic Locking|Status: IN_PROGRESS | Priority: CRITICAL | Assignee: John Doe
 =====================================
 
 Expected error: Concurrent modification detected
@@ -41,8 +41,8 @@ Expected error: Concurrent modification detected
 Final Tasks:
 
 ===== Task List: Sprint Backlog =====
----32785a3b-77ce-407d-8038-2a6729b43935|---Design Task Management System|Status: COMPLETED | Priority: HIGH | Assignee: Andy Romio
----33c9ee64-5cc6-41e4-a58f-f11da98784f5|---Implement Optimistic Locking|Status: IN_PROGRESS | Priority: CRITICAL | Assignee: John Doe
+---4e8a833f-4be7-48ed-83a9-5f5d7b566198|---Implement Optimistic Locking|Status: IN_PROGRESS | Priority: CRITICAL | Assignee: John Doe
+---319b529d-4f2e-4031-8033-f86e3132be6f|---Design Task Management System|Status: COMPLETED | Priority: HIGH | Assignee: Andy Romio
 =====================================
 
 
