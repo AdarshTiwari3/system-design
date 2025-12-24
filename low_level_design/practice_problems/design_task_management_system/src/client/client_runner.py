@@ -6,6 +6,7 @@ from core.task_list import TaskList
 from core.task import Task
 from enums.task_priority import TaskPriority
 from views.display_tasks import DisplayTasks
+from strategy.task_sort_by_priority import SortByPriority
 
 def main():
     print("\n=== Task Management System Demo ===\n")
@@ -66,7 +67,7 @@ def main():
     print("Demonstrating optimistic locking failure:")
     stale_version = task2.version
     task_service.start(task2, stale_version) # valid update
-    
+
     print("\n After Task 2 started the Tasks:")
 
     DisplayTasks.display_task_list(sprint_task)
@@ -81,7 +82,8 @@ def main():
 
     print("\nFinal Tasks:")
 
-    DisplayTasks.display_task_list(sprint_task)
+    sorting_strategy=SortByPriority()
+    DisplayTasks.display_task_list(sprint_task, sorting_strategy)
 
     print("\n=== Demo Completed ===\n")
 
