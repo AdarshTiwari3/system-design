@@ -10,7 +10,7 @@ class Account:
         self._account_number: str = account_number
         self._balance=balance
         self._cards: Dict[str, Card]={}
-        self.customer_name=customer_name
+        self._customer_name=customer_name
         self._lock=Lock()
 
     @property
@@ -21,6 +21,10 @@ class Account:
     def balance(self) -> float:
         return self._balance
    
+    @property 
+    def customer_name(self) -> str:
+        return self._customer_name
+    
     def get_cards(self) -> Dict[str, Card]:
         with self._lock:
             return dict(self._cards)
@@ -35,7 +39,7 @@ class Account:
 
     
     def deposit(self, amount: float):
-        if amount<0:
+        if amount<=0:
             raise ValueError("Invaild Amount")
         
         with self._lock:
