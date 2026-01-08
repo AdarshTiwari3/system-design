@@ -3,5 +3,17 @@ Domain Exception represents a business rule violation - not a programming error 
 Example - Account, Transaction errors
 
 """
-class InsufficientBalanceError(Exception):
+class DomainException(Exception):
+    pass
+
+
+class InsufficientBalanceError(DomainException):
+    pass
+
+
+class AccountNotFoundError(DomainException):
+    pass
+
+
+class InvalidAmountError(DomainException):
     pass
