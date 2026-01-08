@@ -8,17 +8,17 @@ class AuthService:
         self._pin_store={} #stores hashed pin
         self._lock=Lock()
 
-    def register_pin(self, account_number: str, pin: str):
+    def register_pin(self, card_number: str, pin: str):
         with self._lock:
-            self._pin_store[account_number]=self._hash(pin)
+            self._pin_store[card_number] = self._hash(pin)
 
-    def validate_pin(self, account_number:str, entered_pin: str) -> None:
+    def validate_pin(self, card_number: str, entered_pin: str) -> None:
         with self._lock:
-            stored_hash=self._pin_store.get(account_number)
+            stored_hash = self._pin_store.get(card_number)
 
         if not stored_hash or stored_hash != self._hash(entered_pin):
             raise InvalidPINError("Invalid PIN")
-        
+
         
 
     def _hash(self, pin: str):
