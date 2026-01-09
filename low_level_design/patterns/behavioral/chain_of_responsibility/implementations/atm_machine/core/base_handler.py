@@ -1,8 +1,9 @@
 """Abstract Base Class for base handler so that we can avoid duplicating some commond operation across the handlers"""
 
 from core.interface_handler import IHandler
+from abc import ABC
 
-class BaseHandler(IHandler):
+class BaseHandler(IHandler,ABC):
     def __init__(self):
         self._next: IHandler = None
 
