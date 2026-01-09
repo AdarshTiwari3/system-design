@@ -31,6 +31,9 @@ class ProcessingState(ATMState):
 
             elif atm.txn_type == TransactionType.WITHDRAW_CASH:
                 atm.bank_service.withdraw(card_number,atm.amount)
+                
+                atm.cash_dispenser.dispense(atm.amount)
+
                 print(f"💸 Withdrawn: {atm.amount}")
 
             elif atm.txn_type == TransactionType.DEPOSITE_CASH:
