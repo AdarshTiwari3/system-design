@@ -1,14 +1,14 @@
 """Payment Processing State"""
 
 from states.atm_state import ATMState
-from states.idle_state import IdleState
+
 from enums.txn_type import TransactionType
 from typing import TYPE_CHECKING
 from exceptions.domain_exception import (InsufficientBalanceError, InvalidAmountError, AccountNotFoundError)
 
 if TYPE_CHECKING:
     from core.atm import ATM
-
+    
 class ProcessingState(ATMState):
     """ Transaction is processing """
 
@@ -50,8 +50,9 @@ class ProcessingState(ATMState):
 
         finally:
             # Always end session
+            
             atm.reset()
-            atm.set_state(IdleState())
+            
             print("🔁 ATM reset to Idle state")
 
         

@@ -1,9 +1,9 @@
 """AuthenticatedState Implementation"""
 
 from states.atm_state import ATMState
-from states.idle_state import IdleState
 from enums.txn_type import TransactionType
 from states.processing_state import ProcessingState
+
 
 class AuthenticatedState(ATMState):
     #yet to be implemented
@@ -35,5 +35,4 @@ class AuthenticatedState(ATMState):
 
     def remove_card(self, atm):
         atm.reset()
-        atm.set_state(IdleState())
         print("💳 Card removed")

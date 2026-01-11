@@ -1,27 +1,40 @@
 from states.atm_state import ATMState
-from states.idle_state import IdleState
 from entities.card import Card
 from enums.txn_type import TransactionType
 from service.auth_service import AuthService
 from service.bank_service import BankService
+from service.cash_dispenser import CashDispenser
 
 class ATM:
-    def __init__(self, auth_service: AuthService, bank_service: BankService):
-        self.current_state=IdleState()
+    # def __init__(self, auth_service: AuthService, bank_service: BankService, cash_dispenser: SimpleCashDispenser): # if we go for simple dispenser
+    def __init__(self, auth_service: AuthService, bank_service: BankService, cash_dispenser: CashDispenser):
+      
+        self.current_state=None
         self.card: Card | None=None
         self.bank_service=bank_service
         self.auth_service = auth_service 
+        self.cash_dispenser = cash_dispenser
+
         #per session data
         self.txn_type: TransactionType | None = None
         self.amount: int | None = None
 
+        self.move_to_idle()
+
+
     def set_state(self, state: ATMState):
         self.current_state=state
+
+    def move_to_idle(self):
+        from states.idle_state import IdleState
+        self.current_state = IdleState()
+
 
     def reset(self):
         self.card=None
         self.txn_type = None
         self.amount = None
+        self.move_to_idle()
 
     def insert_card(self, card: Card):
         self.current_state.insert_card(self, card)
