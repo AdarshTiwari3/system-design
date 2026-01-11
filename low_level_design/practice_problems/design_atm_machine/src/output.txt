@@ -1,0 +1,32 @@
+Running ATM LLD Machine
+ATM Machine Running...
+💳 Card inserted
+Invalid PIN
+💳 Card removed
+💳 Card inserted
+✅ PIN validated successfully
+➡️ Operation selected: WITHDRAW_CASH
+💵 Dispensing total amount: ₹3100
+Dispensing 1 x ₹2000 notes
+Dispensing 2 x ₹500 notes
+Dispensing 1 x ₹100 notes
+💸 Withdrawn: 3100
+✅ Transaction completed successfully
+🔁 ATM reset to Idle state
+💳 Card inserted
+✅ PIN validated successfully
+➡️ Operation selected: DEPOSITE_CASH
+💵 Deposited: 3000
+✅ Transaction completed successfully
+🔁 ATM reset to Idle state
+💳 Card inserted
+✅ PIN validated successfully
+➡️ Operation selected: CHECK_BALANCE
+💰 Current Balance: 2000
+✅ Transaction completed successfully
+🔁 ATM reset to Idle state
+💳 Card inserted
+✅ PIN validated successfully
+➡️ Operation selected: WITHDRAW_CASH
+❌ Transaction failed: Insufficient balance
+🔁 ATM reset to Idle state

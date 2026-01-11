@@ -1,9 +1,12 @@
 """CardInsertedState"""
 
 from states.atm_state import ATMState
-from states.idle_state import IdleState
+
+
 from exceptions.auth_exception import InvalidPINError
 from states.authenticated_state import AuthenticatedState
+
+
 class CardInsertedState(ATMState):
     #yet to be implemented
     def insert_card(self, atm, card):
@@ -34,5 +37,4 @@ class CardInsertedState(ATMState):
     
     def remove_card(self, atm):
         atm.reset()
-        atm.set_state(IdleState())
         print("💳 Card removed")
