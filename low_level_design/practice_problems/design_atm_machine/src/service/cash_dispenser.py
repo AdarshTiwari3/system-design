@@ -3,6 +3,7 @@
 from threading import Lock
 from service.note_dispenser import NoteDispenser
 from exceptions.domain_exception import InvalidAmountError
+from service.dispense_chain import DispenseChain
 
 class CashDispenser:
     def __init__(self):
@@ -17,7 +18,7 @@ class CashDispenser:
         note_2000.set_next(note_500)
         note_500.set_next(note_100)
 
-        self._chain=note_2000 # CoR Chain
+        self._chain: DispenseChain =note_2000 # CoR Chain
 
     def dispense(self, amount: int):
         if amount <=0:
