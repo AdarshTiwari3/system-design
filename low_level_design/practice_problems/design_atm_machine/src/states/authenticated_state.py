@@ -13,7 +13,7 @@ class AuthenticatedState(ATMState):
     def enter_pin(self, atm, pin: str):
         raise Exception("Already authenticated")
     def select_transaction(self, atm, txn_type, amount = None):
-        if txn_type in (TransactionType.WITHDRAW_CASH, TransactionType.DEPOSITE_CASH):
+        if txn_type in (TransactionType.WITHDRAW_CASH, TransactionType.DEPOSIT_CASH):
             if amount is None or amount <= 0:
                 raise Exception("Valid amount required")
             
