@@ -15,3 +15,9 @@ class InvalidRequestError(ElevatorException):
 
 class CapacityExceededError(ElevatorException):
     pass
+
+
+class NoPendingRequestError(ElevatorException):
+    """Raised when no pending requests are available to serve."""
+
+    pass
