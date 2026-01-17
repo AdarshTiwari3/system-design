@@ -3,6 +3,7 @@
 from dataclasses import dataclass, field
 from enums.request_type import RequestType
 from enums.direction import Direction
+from exceptions.domain_exceptions import InvalidRequestError
 
 
 @dataclass(
@@ -29,7 +30,9 @@ class Request:
 
     def __post_init__(self):
         if self.source_floor == self.target_floor:
-            raise ValueError("Source floor and target floor cannot be the same.")
+            raise InvalidRequestError(
+                "Source floor and target floor cannot be the same."
+            )
 
         object.__setattr__(
             self, "direction", self._derive_direction()
