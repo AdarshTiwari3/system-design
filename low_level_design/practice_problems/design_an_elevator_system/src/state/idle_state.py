@@ -1,18 +1,22 @@
 """Idle state of an Elevator"""
 
-from state.elevator_state import ElevatorState
-from state.moving_up_state import MovingUpState
-from state.moving_down_state import MovingDownState
 from enums.direction import Direction
 from entities.request import Request
+from state.elevator_state import ElevatorState
 
 
 class IdleState(ElevatorState):
     def move(self, elevator):
-        if elevator.has_up_request():
+        if elevator.has_up_requests():
+            from state.moving_up_state import (
+                MovingUpState,
+            )  # lazy imports to avoid circular dependencies
+
             elevator.set_state(MovingUpState())
 
-        elif elevator.has_down_request():
+        elif elevator.has_down_requests():
+            from state.moving_down_state import MovingDownState
+
             elevator.set_state(MovingDownState())
 
     def add_request(self, elevator, request: Request):

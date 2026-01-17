@@ -2,13 +2,17 @@
 
 from state.elevator_state import ElevatorState
 from enums.direction import Direction
-from state.moving_up_state import MovingUpState
-from state.idle_state import IdleState
 from enums.request_type import RequestType
 
 
 class MovingDownState(ElevatorState):
+
     def move(self, elevator):
+
+        # Lazy imports
+        from state.moving_up_state import MovingUpState
+        from state.idle_state import IdleState
+
         if not elevator.has_down_requests():
             if elevator.has_up_requests():
                 elevator.set_state(MovingUpState())
@@ -27,7 +31,7 @@ class MovingDownState(ElevatorState):
         if current_floor == next_floor:
             # pop it first
             elevator.pop_next_down_request()
-            print(f"Elevator stopped at floor {current_floor}")
+            print(f"Elevator {elevator.elevator_id} stopped at floor {current_floor}")
             # edge case what if we have other requests
 
             if not elevator.has_down_requests():

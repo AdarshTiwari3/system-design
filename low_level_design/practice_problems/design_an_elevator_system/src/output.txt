@@ -1,0 +1,40 @@
+Running an Elevator System
+[Display] Elevator E1 | Floor: 1 | Direction: IDLE
+[Display] Elevator E2 | Floor: 4 | Direction: IDLE
+[Display] Elevator E3 | Floor: 7 | Direction: IDLE
+[Display] Elevator E4 | Floor: 10 | Direction: IDLE
+
+⏳ Elevator Started
+
+[Display] Elevator E1 | Floor: 1 | Direction: UP
+[Display] Elevator E2 | Floor: 4 | Direction: UP
+[Display] Elevator E3 | Floor: 7 | Direction: DOWN
+[Display] Elevator E4 | Floor: 10 | Direction: DOWN
+[Display] Elevator E1 | Floor: 2 | Direction: UP
+[Display] Elevator E2 | Floor: 5 | Direction: UP
+[Display] Elevator E3 | Floor: 6 | Direction: DOWN
+[Display] Elevator E4 | Floor: 9 | Direction: DOWN
+[Display] Elevator E1 | Floor: 3 | Direction: UP
+[Display] Elevator E2 | Floor: 6 | Direction: UP
+[Display] Elevator E3 | Floor: 5 | Direction: DOWN
+[Display] Elevator E4 | Floor: 8 | Direction: DOWN
+[Display] Elevator E1 | Floor: 4 | Direction: UP
+[Display] Elevator E2 | Floor: 7 | Direction: UP
+[Display] Elevator E3 | Floor: 4 | Direction: DOWN
+[Display] Elevator E4 | Floor: 7 | Direction: DOWN
+[Display] Elevator E1 | Floor: 5 | Direction: UP
+[Display] Elevator E2 | Floor: 8 | Direction: UP
+[Display] Elevator E3 | Floor: 3 | Direction: DOWN
+[Display] Elevator E4 | Floor: 6 | Direction: DOWN
+[Display] Elevator E1 | Floor: 6 | Direction: UP
+Elevator E2 stopped at floor 8
+[Display] Elevator E2 | Floor: 8 | Direction: IDLE
+[Display] Elevator E3 | Floor: 2 | Direction: DOWN
+[Display] Elevator E4 | Floor: 5 | Direction: DOWN
+Elevator E1 stopped at floor 6
+[Display] Elevator E1 | Floor: 6 | Direction: IDLE
+Elevator E3 stopped at floor 2
+[Display] Elevator E3 | Floor: 2 | Direction: IDLE
+[Display] Elevator E4 | Floor: 4 | Direction: DOWN
+Elevator E4 stopped at floor 4
+[Display] Elevator E4 | Floor: 4 | Direction: IDLE

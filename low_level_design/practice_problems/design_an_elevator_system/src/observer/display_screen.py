@@ -10,10 +10,10 @@ if TYPE_CHECKING:
 class ElevatorDisplayScreen(ElevatorObserver):
     """Represents the elevator display screen that shows current floor and direction"""
 
-    def update(self, elevator: Elevator) -> None:
+    def update(self, elevator: "Elevator") -> None:
         self._show(elevator)
 
-    def _show(self, elevator: Elevator) -> None:
+    def _show(self, elevator: "Elevator") -> None:
         print(
             f"[Display] Elevator { elevator.elevator_id} | "
             f"Floor: {elevator.current_floor} | "
