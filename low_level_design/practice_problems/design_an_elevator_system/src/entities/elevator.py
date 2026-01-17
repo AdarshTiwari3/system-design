@@ -56,12 +56,18 @@ class Elevator:
     def elevator_id(self) -> str:
         return self._elevator_id
 
+    # setter for floor
+
+    def set_floor(self, floor: int):
+        with self._lock:
+            self._current_floor = floor
+
     # -------- State Handling -------
 
     def set_state(self, state: ElevatorState):
         with self._lock:
             self._current_state = state
-            self._notify_observers()
+        self._notify_observers()
 
     def move(self):
         with self._lock:
@@ -73,11 +79,11 @@ class Elevator:
 
     # ------- Request Queues --------
 
-    def has_up_requests(self):
+    def has_up_requests(self) -> bool:
         with self._lock:
             return len(self._up_requests) > 0
 
-    def has_down_requests(self):
+    def has_down_requests(self) -> bool:
         with self._lock:
             return len(self._down_requests) > 0
 
