@@ -75,6 +75,16 @@ async def fetch_random_user() -> RandomUserAPIResponse:
     return RandomUserAPIResponse.model_validate(transformed)
 
 
+@app.get("/health")
+async def get_health():
+    cache: RedisCache = app.state.cache
+
+    if not await cache.exists("health-check"):
+        return {"status": "ok"}
+
+    return {"status": "ok"}
+
+
 @app.get("/random-users", response_model=CachedResponse)
 async def get_random_users() -> CachedResponse:
     """Return cached users or fetch from upstream if cache miss."""
