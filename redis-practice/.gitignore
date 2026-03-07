@@ -1,9 +1,0 @@
-__pycache__/
-.vscode
-.DS_store
-
-.venv
-.mypy_cache
-.ruff_cache
-
-.env
